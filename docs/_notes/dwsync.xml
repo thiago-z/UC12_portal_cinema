@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="aula_crud.sql" server="192.168.1.10//var/www/html/" local="131671120860280370" remote="131670300000000000" Dst="1" />
-<file name="novo_bd.sql" server="192.168.1.10//var/www/html/" local="131672574015683759" remote="131672772000000000" Dst="1" />
+<file name="aula_crud.sql" server="192.168.1.10//var/www/html/" local="131673286660000000" remote="131673476400000000" Dst="1" />
+<file name="novo_bd.sql" server="192.168.1.10//var/www/html/" local="131673286680000000" remote="131673476400000000" Dst="1" />
+<file name="adicionar.php" server="192.168.1.10//var/www/html/" local="131673286660000000" remote="131673476400000000" Dst="1" />
+<file name="cadastrar_noticia.php" server="192.168.1.10//var/www/html/" local="131673286670000000" remote="131673476400000000" Dst="1" />
+<file name="editar.php" server="192.168.1.10//var/www/html/" local="131673286670000000" remote="131673476400000000" Dst="1" />
+<file name="excluir.php" server="192.168.1.10//var/www/html/" local="131673286670000000" remote="131673476400000000" Dst="1" />
+<file name="login.php" server="192.168.1.10//var/www/html/" local="131673286670000000" remote="131673476400000000" Dst="1" />
+<file name="logout.php" server="192.168.1.10//var/www/html/" local="131673286680000000" remote="131673476400000000" Dst="1" />
+<file name="registrar.php" server="192.168.1.10//var/www/html/" local="131673286690000000" remote="131673476400000000" Dst="1" />
+<file name="ver.php" server="192.168.1.10//var/www/html/" local="131673286690000000" remote="131673476400000000" Dst="1" />
 </dwsync>

@@ -33,6 +33,12 @@ header{
 	padding-bottom: 10px;
 }
 
+.teste {
+	width: 100%;
+	background-color: aquamarine;
+	margin: auto 0;
+	height: 500px;
+}
 
 #portal_id{
 	position: relative;
@@ -155,8 +161,9 @@ footer p{
 #pginicial{
 	position: relative;
 	width: 100%; /*1000px de 1368px*/
-	min-height: auto;
-	background-color: aliceblue;
+	height: auto;
+	min-height: 500px;
+	background-color: #F4E8CC;
 	padding: 10px;
 	margin-top: 10px;
 }
@@ -170,6 +177,7 @@ footer p{
 	margin-top: 30px;
 	border-radius: 5px; 
 	padding: 10px;
+	padding-left: 50px;
 }
 
 #pginicial section h1{
@@ -180,11 +188,6 @@ footer p{
 	font-size: 1.125em;
 	font-weight: bold;
 }
-
-#pginicial section div{
-	padding-left: 50px;
-}
-
 
 /****listagem de noticias.php****/
 #pgconsultanoticias{
