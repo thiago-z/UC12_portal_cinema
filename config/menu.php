@@ -1,9 +1,11 @@
-<nav>
+<nav class="menu">
 	 <ul>
-	 
-		 <li><a href="verFilmes.php">Visualizar e cadastrar filmes</a></li>
+	 	
+	 	 <li><a href="index.php">Home</a></li>
+	 	 
+		 <li><a href="verFilmes.php">Filmes</a></li>
 		 
-		 <li><a href="verNoticias.php">Cadastrar notícia/artigos</a></li>
+		 <li><a href="verNoticias.php">Notícias e artigos</a></li>
 		 
 		 <li><a href="logout.php">Sair</a></li>
 

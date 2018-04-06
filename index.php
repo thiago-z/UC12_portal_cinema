@@ -29,8 +29,17 @@
 	</div>
 		
 </header>
-<div id="pginicial">						
-						
+<div id="pginicial">
+											
+	<section>
+		
+		<p>Bem vendo ao Portal Administrativo do site "Nome do site"!</p>
+		<br><br>
+		<p>Aqui você pode gerenciar todo o conteúdo que fica visível no site, assim como adicionar novas notícias ou artigos para o site.</p>
+		<br><br>
+		<p>Você também deve adicionar novos filmes no banco de dados para relacionar com as noticias postadas no site.</p>
+		
+	</section>					
 	
 </div>	
 	

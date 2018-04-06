@@ -47,12 +47,24 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
 		
 </header>
 <div id="pginicial">
+		
+		
+<nav class="submenu">
+	
+	<ul>
+		
+		<li><a href="index.php">Voltar para Home</a></li>
+		<li><a href="verNoticias.php">Visualizar notícias</a></li>
+		
+	</ul>
+	
+</nav>		
 
 		<section>
 		
 		<h1>Cadastro de notícias e artigos para o site</h1>	
 				
-		<form action='bdinserirnoticia.php?autor=<?php echo "".$_SESSION['id']."";?>' method='post'>		
+		<form action='config/bdinserirnoticia.php?autor=<?php echo "".$_SESSION['id']."";?>' method='post'>		
 			<fieldset>
 				<fieldset class='grupo'>
 				

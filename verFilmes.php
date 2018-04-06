@@ -45,9 +45,17 @@ include_once("config/conectar.php");
 $result = mysqli_query($strcon, "SELECT * FROM filmes ORDER BY id DESC");
 ?>
 	
-<a href="index.php">Início</a> | 
-	<a href="adicionarFilme.php">Adicionar filme</a> | 
-	<a href="logout.php">Logout</a>
+<nav class="submenu">
+	
+	<ul>
+		
+		<li><a href="index.php">Voltar para Home</a></li>
+		<li><a href="adicionarFilme.php">Adicionar filme</a></li>
+		
+	</ul>
+	
+</nav>	
+
 	<br><br>
 	<h3>Lista de filmes cadastrados</h3>
 	<table width='80%' border=0>

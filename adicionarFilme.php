@@ -48,7 +48,18 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
 </header>
 <div id="pginicial">
 
-		<section class='formulario'>										
+<nav class="submenu">
+	
+	<ul>
+		
+		<li><a href="index.php">Voltar para Home</a></li>
+		<li><a href="verFilmes.php">Viualizar filmes</a></li>
+		
+	</ul>
+	
+</nav>	
+
+<section class='formulario'>										
 
 <?php
 //Inclui o arquivo de conexao ao banco de dados
@@ -58,7 +69,7 @@ include_once("config/conectar.php");
 
 		<h1>Cadastro filme</h1>	
 				
-		<form action='bdinserirfilme.php' method='post' accept-charset="UTF-8">		
+		<form action='config/bdinserirfilme.php' method='post' accept-charset="UTF-8">		
 			<fieldset>
 				<fieldset class='grupo'>
  
@@ -86,7 +97,7 @@ include_once("config/conectar.php");
         		
         		
         		<div class='campo'>
-            		<label for='genero[]' required>Gênero*</label>
+            		<label for='genero' required>Gênero*</label>
             		
         		<?php
 				
@@ -127,14 +138,18 @@ include_once("config/conectar.php");
             		<label for='elenco'>Elenco*</label>
            	 		<textarea rows='6' style='width: 30em' id='elenco' name='elenco' required></textarea>
         		</div>
+        		
+        		<!--EDITOR DE CÓDIGO-->	
+           	 	<script src="ckeditor/ckeditor.js"></script>
+           	 	
+           	 		<script>
+						CKEDITOR.replace( 'elenco' );
+					</script>
 					
        			<div class='campo'>
             		<label for='sinopse'>Sinopse*</label>
            	 		<textarea rows='10' style='width: 30em' id='sinopse' name='sinopse' required></textarea>
         		</div>
-        		
-				<!--EDITOR DE CÓDIGO-->	
-           	 	<script src="ckeditor/ckeditor.js"></script>
            	 	
            	 		<script>
 						CKEDITOR.replace( 'sinopse' );
@@ -181,9 +196,9 @@ include_once("config/conectar.php");
 	
 </div>	
 	
-<!--<footer>
+<footer>
 	<p>2018 Todos os direitos reservados</p>
-</footer>-->
+</footer>
 </main>
 </body>
 </html>

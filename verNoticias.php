@@ -42,9 +42,18 @@ include_once("config/conectar.php");
 $result = mysqli_query($strcon, "SELECT * FROM noticias ORDER BY id DESC");
 ?>
 	
-<a href="index.php">Início</a> | 
-	<a href="adicionarNoticia.php">Adicionar Notícia ou Artigo</a> | 
-	<a href="logout.php">Logout</a>
+
+<nav class="submenu">
+	
+	<ul>
+		
+		<li><a href="verNoticias.php">Voltar</a></li>
+		<li><a href="adicionarNoticia.php">Adicionar notícia/artigo</a></li>
+		
+	</ul>
+	
+</nav>
+
 	<br><br>
 	<h3>Lista de notícias e artigos cadastrados</h3>
 	<table width='80%' border=0>
