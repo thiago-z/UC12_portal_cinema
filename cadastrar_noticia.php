@@ -26,12 +26,13 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
 <main role="main">
 <header id="login">
 	<div id="portal_id">
-		<p>Sistema de cadastro</p>
-		<br>
-		<br>
-		<?php
-			include('menu.php');
-		?>
+		
+		<!--PARTE SUPERIOR COM LOGON E MENU MOVIDO PARA ARQUIVO SEPARADO-->
+	<?php
+		
+		include('config/logon_menu.php');
+		
+	?>
 
 	</div>
 	

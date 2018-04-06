@@ -13,8 +13,10 @@
 <body>
 <main role="main">
 <header id="login">
+
 	<div id="portal_id">
-		<p>Sistema de cadastro</p>
+		
+		<h6>Sistema de cadastro</h6>
 		<br>
 		<br>
 		<section class="formulario">	
@@ -65,6 +67,7 @@ else {
 	
 		<form method="POST" action="">
             <h2>Área Restrita</h2>
+            <br>
             <label>Nome de Usuário</label>
             <input type="text" name="usuario" placeholder="usuario" required autofocus>
             <label>Senha</label>

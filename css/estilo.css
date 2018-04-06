@@ -49,8 +49,14 @@ header{
 
 #portal_id p{
 	text-transform: uppercase;
-	font-size: 1.375em;	
-	text-shadow: 0px 0px 9px rgba(0,0,0,0.40);
+	width: 30%;
+	font-size: 1em;	
+	text-shadow: 1px 1px 5px rgba(0,0,0,0.60);
+	background: linear-gradient(top, #efefef 0%, #8E8E8E 100%);  
+	background: -moz-linear-gradient(top, #efefef 0%, #8E8E8E 80%); 
+	background: -webkit-linear-gradient(top, #efefef 0%,#8E8E8E 80%); 
+	border-radius: 15px 15px 0 0;
+	color: #2B2B2B;
 }
 
 #portal_id h6{
@@ -58,6 +64,7 @@ header{
 	font-size: 2em;	
 	text-shadow: 0px 0px 9px rgba(0,0,0,0.40);
 }
+
 
 /*#################menu*/
 nav ul ul {
@@ -102,8 +109,23 @@ nav ul li {
  }
  nav ul li:hover a {
  color: #fff;
+
  }
  
+
+nav ul li:last-child:hover{
+ background: #800002;
+ background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+ background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+ background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
+
+ }
+nav ul li:last-child:hover a{
+	color: #FF0004;
+	transition: .5s all ease;
+}
+
+
  nav ul li a {
  	display: block; 
 	padding: 15px 20px;
