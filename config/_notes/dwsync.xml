@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
 <file name="conectar.php" server="192.168.1.10//var/www/html/" local="131673383016347536" remote="131673490800000000" Dst="1" />
+<file name="bdinserirfilme.php" server="192.168.1.10//var/www/html/" local="131674567931915964" remote="131674678200000000" Dst="1" />
+<file name="bdinserirnoticia.php" server="192.168.1.10//var/www/html/" local="131674567931925745" remote="131674678200000000" Dst="1" />
+<file name="registro_bd.php" server="192.168.1.10//var/www/html/" local="131674567931955103" remote="131674678200000000" Dst="1" />
 </dwsync>
