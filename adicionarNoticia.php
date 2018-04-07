@@ -123,6 +123,7 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
            			<input type='text' id='img' name='img' style='width: 30em' value=''>
 					<p style='font-size: .6em'>Digite somente nome e extenção, exemplo: imagem.jpg</p>
 					<p style='font-size: .6em'>Salvar imagem para notícia em: UC12_site_cinema\img\noticias</p>
+       				<p style='font-size: .6em'>Salvar imagem para artigo em: UC12_site_cinema\img\noticias\artigos</p>
         		</div>
         		
         		
@@ -134,9 +135,9 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
             	</div>
         		
         		<div class='campo'>
-            		<label for='imgDestaque'>Imagem para notícia ou artigo*</label>
+            		<label for='imgDestaque'>Imagem de destaque</label>
            			<input type='text' id='imgDestaque' name='imgDestaque' style='width: 30em' value=''>
-					<p style='font-size: .6em'>Salvar imagem para artigo em: UC12_site_cinema\img\noticias\artigos</p>
+					<p style='font-size: .6em'>Salvar imagem destaque em: UC12_site_cinema\img\slideshow</p>
         		</div>
  				</fieldset>	
  				

@@ -92,7 +92,7 @@ mysqli_close($strcon);
 
 echo "<p>Notícia ou artigo cadastrados com sucesso!</p>";
 echo "<br><br>";
-echo "<p>Para cadastrar outra clique <a href='adicionarNoticia.php'><b>aqui</b>.<a></p>";
+echo "<p>Para cadastrar outra clique <a href='../adicionarNoticia.php'><b>aqui</b>.<a></p>";
 ?>
 	
 	

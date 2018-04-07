@@ -73,7 +73,7 @@ $result = mysqli_query($strcon, "SELECT * FROM noticias ORDER BY id DESC");
 			echo "<td>".$res['hora']."</td>";
 			echo "<td>".$res['autor']."</td>";
 			echo "<td>".$res['destaque']."</td>";
-			echo "<td><a href=\"editar.php?id=$res[id]\">Editar</a> | <a href=\"excluir.php?id=$res[id]\" onClick=\"return confirm('Tem certeza de que você deseja excluir?')\">Excluir</a></td>";		
+			echo "<td><a href=\"editar.php?id=$res[id]\">Editar</a> | <a href=\"excluirNoticia.php?id=$res[id]\" onClick=\"return confirm('Tem certeza de que você deseja excluir?')\">Excluir</a></td>";		
 		}
 		?>
 	</table>	
