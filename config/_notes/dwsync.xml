@@ -5,5 +5,7 @@
 <file name="bdinserirnoticia.php" server="192.168.1.10//var/www/html/" local="131675380421264654" remote="131675488200000000" Dst="1" />
 <file name="registro_bd.php" server="192.168.1.10//var/www/html/" local="131674567931955103" remote="131674678200000000" Dst="1" />
 <file name="logon_menu.php" server="192.168.1.10//var/www/html/" local="131674600530294773" remote="131674708200000000" Dst="1" />
-<file name="menu.php" server="192.168.1.10//var/www/html/" local="131675230597081869" remote="131675338200000000" Dst="1" />
+<file name="menu.php" server="192.168.1.10//var/www/html/" local="131677796822331443" remote="131677904400000000" Dst="1" />
+<file name="logout.php" server="192.168.1.10//var/www/html/" local="131677795596908356" remote="131677903200000000" Dst="1" />
+<file name="verFilmes.php" server="192.168.1.10//var/www/html/" local="131675248200000000" remote="131677909800000000" Dst="1" />
 </dwsync>

@@ -7,7 +7,7 @@
 		 
 		 <li><a href="verNoticias.php">Notícias e artigos</a></li>
 		 
-		 <li><a href="logout.php">Sair</a></li>
+		 <li><a href="config/logout.php">Sair</a></li>
 
 	 </ul>
 </nav>

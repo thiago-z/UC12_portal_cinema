@@ -21,8 +21,4 @@ $result=mysqli_query($strcon, "DELETE FROM filmes WHERE id=$id");
 header("Location:verFilmes.php");
 
 
-
-	
-
-
 ?>
