@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
 <file name="index.php" server="192.168.1.10//var/www/html/" local="131675235861022845" remote="131675343600000000" Dst="1" />
-<file name="login.php" server="192.168.1.10//var/www/html/" local="131674605190508239" remote="131674713000000000" Dst="1" />
+<file name="login.php" server="192.168.1.10//var/www/html/" local="131677826938078925" remote="131677934400000000" Dst="1" />
 <file name="logout.php" server="192.168.1.10//var/www/html/" local="131673286640000000" remote="131673476400000000" Dst="1" />
 <file name="registrar.php" server="192.168.1.10//var/www/html/" local="131673384263442932" remote="131673492000000000" Dst="1" />
 <file name="bdinserirfilme.php" server="192.168.1.10//var/www/html/" local="131675158892847095" remote="131675269200000000" Dst="1" />
-<file name="verFilmes.php" server="192.168.1.10//var/www/html/" local="131677807075563638" remote="131677914600000000" Dst="1" />
-<file name="verNoticias.php" server="192.168.1.10//var/www/html/" local="131675375866077213" remote="131675483400000000" Dst="1" />
-<file name="adicionarNoticia.php" server="192.168.1.10//var/www/html/" local="131675386013684330" remote="131675493600000000" Dst="1" />
+<file name="verFilmes.php" server="192.168.1.10//var/www/html/" local="131677837253251895" remote="131677945200000000" Dst="1" />
+<file name="verNoticias.php" server="192.168.1.10//var/www/html/" local="131677842023083076" remote="131677950000000000" Dst="1" />
+<file name="adicionarNoticia.php" server="192.168.1.10//var/www/html/" local="131677844514741448" remote="131677952400000000" Dst="1" />
 <file name="adicionarFilme.php" server="192.168.1.10//var/www/html/" local="131675229781397020" remote="131675337600000000" Dst="1" />
 <file name="excluirFilme.php" server="192.168.1.10//var/www/html/" local="131677801836465745" remote="131677909800000000" Dst="1" />
 <file name="excluirNoticia.php" server="192.168.1.10//var/www/html/" local="131674530010000000" remote="131674638000000000" Dst="1" />
 <file name="editarFilme.php" server="192.168.1.10//var/www/html/" local="131675158893530667" remote="131675269200000000" Dst="1" />
+<file name="editar.php" server="192.168.1.10//var/www/html/" local="131677845061020549" remote="131673559200000000" Dst="1" />
+<file name="index.old.php" server="192.168.1.10//var/www/html/" local="131677845061316375" remote="131673548400000000" Dst="1" />
 </dwsync>

@@ -13,14 +13,14 @@
 body{
 	font-family: minha_font;
 	font-size: 1em;
-	background-color: #675300;
+	background-color: #1F3F60;
 }
 
 main{
 	position: relative;
 	max-width: 73.09941520467836%;
 	height: auto;
-	background-color: #EFD463;
+	background-color: #D1DFEF;
 	box-shadow: 0px 0px 9px rgba(0,0,0,0.50);
 }
 
@@ -28,9 +28,8 @@ header{
 	position: relative;
 	width: 100%;
 	height: 200px;
-	background-color: #EFD463;	
+	background-color: #93A5B7;	
 	text-align: center;
-	padding-bottom: 10px;
 }
 
 .teste {
@@ -286,9 +285,39 @@ footer p{
 #pginicial{
 	position: relative;
 	width: 100%; /*1000px de 1368px*/
+	min-width: 500px;
 	height: auto;
-	background-color: #F4E8CC;
-	overflow: auto;
+	background-color: #D1DFEF;
+	
+}
+
+#pg_filme_consulta {
+	position: relative;
+	width: 100%; /*1000px de 1368px*/
+	min-width: 500px;
+	height: auto;
+	background-color: #D1DFEF;
+}
+
+#pg_filme_consulta section{
+	position: relative;
+	width: 100%;
+	min-height: 500px;
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+	border: 1px solid #E8E8E8;
+	margin-top: 30px;
+	border-radius: 5px; 
+	padding: 10px;
+	padding-left: 50px;
+}
+
+#pg_filme_consulta section h1{
+	text-align: center;
+}
+
+#pg_filme_consulta section p{
+	font-size: 1.125em;
+	font-weight: bold;
 }
 
 #pginicial section{

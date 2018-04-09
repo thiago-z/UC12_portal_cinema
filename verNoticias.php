@@ -54,6 +54,7 @@ $result = mysqli_query($strcon, "SELECT * FROM noticias ORDER BY id DESC");
 	
 </nav>
 
+<section>
 	<br><br>
 	<h3>Lista de notícias e artigos cadastrados</h3>
 	<table width='80%' border=0>
@@ -77,6 +78,7 @@ $result = mysqli_query($strcon, "SELECT * FROM noticias ORDER BY id DESC");
 		}
 		?>
 	</table>	
+</section>
 	
 </div>	
 	

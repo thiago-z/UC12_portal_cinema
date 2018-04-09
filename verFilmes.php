@@ -34,7 +34,7 @@ if(!isset($_SESSION['aberta'])) {
 	</div>
 		
 </header>
-<div id="pginicial">						
+<div id="pg_filme_consulta">						
 	
 <nav class="submenu">
 	
@@ -49,7 +49,6 @@ if(!isset($_SESSION['aberta'])) {
 
 	<br><br>
 
-	
 	<h3>Lista de filmes cadastrados</h3>
 	
 	
@@ -92,8 +91,9 @@ echo "<div class='lista_filmes_container'>
 	
 	<div class='gerenciar_filmes'>
 	
-		<div><a href=''><i class='fas fa-edit'></i><br>Editar</a></div
-		<div><a href='excluirFilme.php?id=$id\' onClick=\"return confirm('Tem certeza de que você deseja excluir?')\><i class='fas fa-trash-alt'></i><br>Excluir</a></div>
+		<div><a href='editar.php?id=$id'><i class='fas fa-edit'></i><br>Editar</a></div>
+		
+		<div><a href='excluirFilme.php?id=$id'><i class='fas fa-trash-alt'></i><br>Excluir</a></div>
 		
 	</div>
 	
@@ -102,7 +102,7 @@ echo "<div class='lista_filmes_container'>
 			
 }
 ?>		
-	
+
 </div>	
 	
 <footer>

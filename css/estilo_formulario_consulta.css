@@ -2,7 +2,7 @@
 
 /*ESTILO DA TABELA COM LISTA DE FILMES*/
 
-#pginicial h3 {
+#pg_filme_consulta h3 {
 	text-align: center;
 	margin-bottom: 30px;
 }
@@ -11,7 +11,7 @@
 	position: relative;
 	width: 90%; /*900px*/
 	height: auto;
-	background-color: #E0E0E0;
+	background-color: #E9E9E9;
 	display: flex;
 	flex-direction: row;
 	overflow: auto;
@@ -50,7 +50,7 @@
 }
 
 .lista_filmes h2 {
-	font-size: 1.375em;
+	font-size: 1.25em;
 }
 
 .lista_filmes div{
@@ -69,7 +69,7 @@
 	margin: auto 0;
 }
 
-.gerenciar_filmes > div{
+.gerenciar_filmes  > div{
 	min-width: 90%;
 	height: 70px;
 	text-align: center;

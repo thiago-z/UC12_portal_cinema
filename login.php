@@ -91,7 +91,10 @@ else {
 </header>
 <div id="pginicial">						
 						
-	
+	<section>
+		
+		
+	</section>
 	
 	
 </div>	
