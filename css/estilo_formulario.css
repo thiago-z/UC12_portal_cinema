@@ -406,5 +406,18 @@ fieldset.grupo .campo {
 	position: relative;
 	margin: 0 auto;
 }
+
+/*ESTILO DA TABELA COM LISTA DE FILMES*/
+	
+	#lista_filmes table {
+		position: relative;
+		width: 90%;
+		height: auto;
+		background-color: #A0A0A0;
+	}
+	
+
 	
 }
+	
+

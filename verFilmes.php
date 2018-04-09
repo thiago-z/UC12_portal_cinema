@@ -71,12 +71,13 @@ $result = mysqli_query($strcon, "SELECT * FROM filmes ORDER BY id DESC");
 			echo "<tr>";
 			echo "<td>".$res['nome']."</td>";
 			echo "<td>".$res['estreia']."</td>";
-			echo "<td>".$res['poster']."</td>";
+			echo "<td width='10%'><img src='../UC12_site_cinema/img/posters".$res['poster']."' width='100%' alt=".$res['nome']."></td>";
 			echo "<td>".$res['emCartaz']."</td>";	
 			echo "<td><a href=\"editarFilme.php?id=$res[id]\">Editar</a> | <a href=\"excluirFilme.php?id=$res[id]\" onClick=\"return confirm('Tem certeza de que você deseja excluir?')\">Excluir</a></td>";		
 		}
 		?>
-	</table>	
+	</table>
+	
 	
 </div>	
 	
