@@ -5,7 +5,7 @@
 	 	 
 		 <li><a href="verFilmes.php">Filmes</a></li>
 		 
-		 <li><a href="verNoticias.php">Notícias e artigos</a></li>
+		 <li><a href="verNoticias.php?ordem=ASC">Notícias e artigos</a></li>
 		 
 		 <li><a href="config/logout.php">Sair</a></li>
 

@@ -51,13 +51,22 @@ if(!isset($_SESSION['aberta'])) {
 
 	<h3>Lista de filmes cadastrados</h3>
 	
+	<div id='barra_filtro'>
+		
+		<li><a href='verFilmes.php?ordem=DESC'><i class='fas fa-sort-alpha-up'></i></a></li>
+		
+		<li><a href='verFilmes.php?ordem=ASC'><i class='fas fa-sort-alpha-down'></i></a></li>
+		
+	</div>
 	
 <?php
 	//Incluir o arquivo de conexão ao banco de dados:
 	include_once("config/conectar.php");
-
+	
+	$ordem = $_GET["ordem"];
+	
 	//buscar os dados em ordem descrescente (entrada mais recente primeiro)
-	$result = mysqli_query($strcon, "SELECT * FROM filmes ORDER BY id DESC");
+	$result = mysqli_query($strcon, "SELECT * FROM filmes ORDER BY nome $ordem");
 	
 	while($linha = mysqli_fetch_array($result)) {
 	
@@ -68,7 +77,7 @@ if(!isset($_SESSION['aberta'])) {
 	$poster = $linha["poster"];
 	$emCartaz = $linha["emCartaz"];
 		
-		
+				
 
 	
 	

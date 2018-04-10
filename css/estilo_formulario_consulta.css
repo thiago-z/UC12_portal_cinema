@@ -5,6 +5,35 @@
 #pg_filme_consulta h3 {
 	text-align: center;
 	margin-bottom: 30px;
+	font-size: 2em;
+}
+
+#barra_filtro {
+	position: relative;
+	width: 90%;
+	height: 30px;
+	/*background-color: #C0C0C0;*/
+	margin-bottom: 10px;
+}
+
+#barra_filtro li{
+	list-style: none;
+	text-align: right;
+	padding: 0px 10px;
+	float: right;
+	display: block;
+	background-color: #708AA4;
+}
+
+#barra_filtro a {
+	text-decoration: none;
+	color: #2B2B2B;
+	font-size: 1.625em;
+}
+
+#barra_filtro li:hover a{
+	color: #ffffff;
+	transition: .3s all ease;
 }
 
 .lista_filmes_container {

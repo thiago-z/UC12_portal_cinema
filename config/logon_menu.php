@@ -1,9 +1,9 @@
 
-	
-
 	<h6>Sistema de cadastro</h6>
 		<br>
 		<br>
+
+	
 			<?php
 	if(isset($_SESSION['aberta'])) {	// Verifica se usuário já está logado			
 		include("config/conectar.php");					
