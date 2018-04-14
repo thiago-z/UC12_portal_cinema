@@ -4,420 +4,70 @@
 	width: 100%; /*1000px de 1368px*/
 	height: auto;
 	background-color: aliceblue;
-	padding: 20px 0 20px 0;
 }
 
 
-.contato_info,
-.formulario{
-	position: relative;
+.container {
 	width: 90%;
-	margin: auto;
+	margin: 20px;
 }
 
-.contato_info p{
-	text-align: center;
-	position: relative;
-	margin: 2.5%;
-	width: 95%;
-	color: #FF0004;
-	font-size: 1.125em;
-	text-transform: uppercase;
-	
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
 }
 
-fieldset{
-    border: 0;
-	}
-
-input, select, textarea, button {
-    font-family: sans-serif;
-    font-size: 1em;
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
 }
 
-.grupo:before, .grupo:after {
-    content: " ";
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
     display: table;
-}
-
-.grupo:after {
     clear: both;
 }
 
-.campo {
-    margin-bottom: 1em;
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
 }
-
-.campo label {
-    margin-bottom: 0.2em;
-    color: #666;
-    display: block;
-}
-
-fieldset.grupo .campo {
-    float:  left;
-    margin-right: 1em;
-}
-
-.campo input[type="text"],
-.campo input[type="email"],
-.campo input[type="url"],
-.campo input[type="tel"],
-.campo select,
-.campo textarea {
-    padding: 0.2em;
-    border: 1px solid #CCC;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    display: block;
-}
-
-.campo select option {
-    padding-right: 1em;
-}
-
-.campo input:focus, .campo select:focus, .campo textarea:focus {
-    background: #FFC;
-}
-
-.campo label.checkbox {
-    color: #000;
-    display: inline-block;
-    margin-right: 1em;
-}
-
-.botao {
-    font-size: 1.5em;
-    background: #F90;
-    border: 0;
-    margin-bottom: 1em;
-    color: #FFF;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-}
-
-.botao:hover {
-    background: #FB0;
-    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: none;
-}
-
-.botao, select, label.checkbox {
-    cursor: pointer;
-}
-
-#confirmacao{
-	position: relative;
-	width: 100%;
-	min-height: 500px;
-	height: auto;
-	padding-top: 20px;
-	/*background-color: beige;*/
-
-}
-
-#confirmacao img{
-	position: relative;
-	margin: 0 auto;
-}
-@media only screen and (min-height: 481px){
-@media only screen and (max-width: 768px){
-	
-#contato_container{
-	position: relative;
-	width: 100%;
-	height: auto;
-	overflow: auto;
-	margin: auto;
-	box-sizing: border-box;
-	padding: 2%;
-	border: 1px solid #E1E1E1;
-	background-color: #F7F7F7;
-	box-shadow: 1px 1px 3px #E1E1E1;
-	
-}	
-	
-	
-.contato_info{
-	position: relative;
-	width: 100%;
-	max-width: 1200px;
-	height: auto;
-}
-
-.contato_info,
-.formulario{
-	position: relative;
-	margin: 2.5%;
-	width: 45%;
-	float: left;
-}
-
-.contato_info img{
-	width: 50%;
-	margin-left: 25%;
-}
-
-.contato_info p{
-	text-align: center;
-	position: relative;
-	margin: 2.5%;
-	width: 95%;
-	color: #FF0004;
-	font-size: 1.125em;
-	text-transform: uppercase;
-}
-
-fieldset{
-    border: 0;
-	}
-
-input, select, textarea, button {
-    font-family: sans-serif;
-    font-size: 1em;
-}
-
-.grupo:before, .grupo:after {
-    content: " ";
-    display: table;
-}
-
-.grupo:after {
-    clear: both;
-}
-
-.campo {
-    margin-bottom: 1em;
-}
-
-.campo label {
-    margin-bottom: 0.2em;
-    color: #666;
-    display: block;
-}
-
-fieldset.grupo .campo {
-    float:  left;
-    margin-right: 1em;
-}
-
-.campo input[type="text"],
-.campo input[type="email"],
-.campo input[type="url"],
-.campo input[type="tel"],
-.campo select,
-.campo textarea {
-    padding: 0.2em;
-    border: 1px solid #CCC;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    display: block;
-}
-
-.campo select option {
-    padding-right: 1em;
-}
-
-.campo input:focus, .campo select:focus, .campo textarea:focus {
-    background: #FFC;
-}
-
-.campo label.checkbox {
-    color: #000;
-    display: inline-block;
-    margin-right: 1em;
-}
-
-.botao {
-    font-size: 1.5em;
-    background: #F90;
-    border: 0;
-    margin-bottom: 1em;
-    color: #FFF;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-}
-
-.botao:hover {
-    background: #FB0;
-    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: none;
-}
-
-.botao, select, label.checkbox {
-    cursor: pointer;
-}
-
-#confirmacao{
-	position: relative;
-	width: 100%;
-	min-height: 500px;
-	height: auto;
-	padding-top: 20px;
-	/*background-color: beige;*/
-
-}
-
-#confirmacao img{
-	position: relative;
-	margin: 0 auto;
-}	
-	
-}
-}
-
-
-@media only screen and (max-width: 480px){
-
-#contato_container{
-	position: relative;
-	width: 100%;
-	height: auto;
-	overflow: auto;
-	margin: auto;
-	box-sizing: border-box;
-	padding: 2%;
-	border: 1px solid #E1E1E1;
-	background-color: #F7F7F7;
-	box-shadow: 1px 1px 3px #E1E1E1;
-	
-}		
-	
-.contato_info{
-	position: relative;
-	width: 100%;
-	max-width: 1200px;
-	height: auto;
-}
-
-.contato_info,
-.formulario{
-	position: relative;
-	margin: 2.5%;
-	width: 95%;
-}
-
-.contato_info img{
-	width: 50%;
-	margin-left: 25%;
-}
-
-.contato_info p{
-	text-align: center;
-	position: relative;
-	margin: 2.5%;
-	width: 95%;
-	color: #FF0004;
-	font-size: 1.125em;
-	text-transform: uppercase;
-}
-
-fieldset{
-    border: 0;
-	}
-
-input, select, textarea, button {
-    font-family: sans-serif;
-    font-size: 1em;
-}
-
-.grupo:before, .grupo:after {
-    content: " ";
-    display: table;
-}
-
-.grupo:after {
-    clear: both;
-}
-
-.campo {
-    margin-bottom: 1em;
-}
-
-.campo label {
-    margin-bottom: 0.2em;
-    color: #666;
-    display: block;
-}
-
-fieldset.grupo .campo {
-    float:  left;
-    margin-right: 1em;
-}
-
-.campo input[type="text"],
-.campo input[type="email"],
-.campo input[type="url"],
-.campo input[type="tel"],
-.campo select,
-.campo textarea {
-    padding: 0.2em;
-    border: 1px solid #CCC;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    display: block;
-}
-
-.campo select option {
-    padding-right: 1em;
-}
-
-.campo input:focus, .campo select:focus, .campo textarea:focus {
-    background: #FFC;
-}
-
-.campo label.checkbox {
-    color: #000;
-    display: inline-block;
-    margin-right: 1em;
-}
-
-.botao {
-    font-size: 1.5em;
-    background: #F90;
-    border: 0;
-    margin-bottom: 1em;
-    color: #FFF;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-}
-
-.botao:hover {
-    background: #FB0;
-    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: none;
-}
-
-.botao, select, label.checkbox {
-    cursor: pointer;
-}
-
-#confirmacao{
-	position: relative;
-	width: 100%;
-	min-height: 500px;
-	height: auto;
-	padding-top: 20px;
-	/*background-color: beige;*/
-
-}
-
-#confirmacao img{
-	position: relative;
-	margin: 0 auto;
-}
-
-/*ESTILO DA TABELA COM LISTA DE FILMES*/
-	
-	#lista_filmes table {
-		position: relative;
-		width: 90%;
-		height: auto;
-		background-color: #A0A0A0;
-	}
-	
-
-	
-}
-	
-

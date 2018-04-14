@@ -59,47 +59,56 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
 	
 </nav>	
 
-<section class='formulario'>										
+<h2>Cadastro de filmes no banco de dados do site</h2>
+<p>Insira todos os dados corretamente.</p>
 
-<?php
-//Inclui o arquivo de conexao ao banco de dados
-include_once("config/conectar.php");
-
-?>
-
-		<h1>Cadastro filme</h1>	
-				
-		<form action='config/bdinserirfilme.php' method='post' accept-charset="UTF-8">		
-			<fieldset>
-				<fieldset class='grupo'>
- 
-                <div class='campo'>
-					<label for='nome'>Nome nacional*</label>
-					<input type='text' id='nome' name='nome' style='width: 30em' required>
-            	</div>
-           		<div class='campo'>
-					<label for='nomeOriginal'>Nome original*</label>
-					<input type='text' id='nomeOriginal' name='nomeOriginal' style='width: 30em' value='' required>
-           		</div>
-				
-				</fieldset>
-				
-				<fieldset class='grupo'>
-        		<div class='campo'>
-            		<label for='estreia'>Estréia*</label>
-           			<input type='text' id='estreia' name='estreia' style='width: 10em' value='' required>
-        		</div>
-					
-				<div class='campo'>
-            		<label for='duracao'>Duração*</label>
-           			<input type='number' id='duracao' name='duracao' style='width: 10em' value='' required>
-        		</div>	
-        		
-        		
-        		<div class='campo'>
-            		<label for='genero' required>Gênero*</label>
-            		
-        		<?php
+<div class="container">
+  <form action='config/bdinserirfilme.php' method='post' accept-charset="UTF-8">
+   
+    <div class="row">
+      <div class="col-25">
+        <label for="nome">Título nacional</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="nome" placeholder="Título">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="nomeOriginal">Título original</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="nomeOriginal" placeholder="Título original">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="estreia">Data de estréia</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="estreia" placeholder="Data">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="duracao">Duração</label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="lname" name="duracao" placeholder="Duração">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="genero">Gênero</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="genero">
+         
+         <?php
 				
 					include_once('config/conectar.php');
 
@@ -116,82 +125,99 @@ include_once("config/conectar.php");
  						{
    						$idgenero = $elemento['idGenero'];
 						$genero = $elemento['nomeGenero'];
-   						echo '<input type="checkbox" name="genero" value="'.$genero.'"> '.$genero.'<br>';
+   						echo '<option value='.$idgenero.'>'.$genero.'</option>';
 						}
-
-						}
-				    ?>	
-
-        		</div>
-
-				<div class='campo'>
-            		<label for='paisOrigem'>País de origem*</label>
-           			<input type='text' id='paisOrigem' name='paisOrigem' style='width: 30em' value='' required>
-        		</div>	
-					
-            	<div class='campo'>
-                	<label for='diretor'>Direção*</label>
-               		<input type='text' id='diretor' name='diretor' style='width: 30em' value='' required>
-            	</div>
-					
-        		<div class='campo'>
-            		<label for='elenco'>Elenco*</label>
-           	 		<textarea rows='6' style='width: 30em' id='elenco' name='elenco' required></textarea>
-        		</div>
-        		
-        		<!--EDITOR DE CÓDIGO-->	
+          
+			}
+		?>		  
+			  
+        </select>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="paisOrigem">País de origem</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="paisOrigem" placeholder="Digite o país..">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="diretor">Direção</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="diretor" placeholder="Diretor..">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="elenco">Elenco</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="elenco" placeholder="Digite nome dos atores.." style="height:200px"></textarea>
+      </div>
+    </div>
+    
+    <!--EDITOR DE CÓDIGO-->	
            	 	<script src="ckeditor/ckeditor.js"></script>
            	 	
            	 		<script>
 						CKEDITOR.replace( 'elenco' );
 					</script>
-					
-       			<div class='campo'>
-            		<label for='sinopse'>Sinopse*</label>
-           	 		<textarea rows='10' style='width: 30em' id='sinopse' name='sinopse' required></textarea>
-        		</div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="sinopse">Elenco</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="sinopse" placeholder="Digite a sinopse do filme.." style="height:200px"></textarea>
+      </div>
+    </div>
+    
+    <!--EDITOR DE CÓDIGO-->	
+           	 	<script src="ckeditor/ckeditor.js"></script>
            	 	
            	 		<script>
 						CKEDITOR.replace( 'sinopse' );
-					</script>
-				
-				
-				<div class='campo'>
-            		<label for='poster'>Poster*</label>
-           			<input type='text' id='poster' name='poster' style='width: 30em' value='' required>
-					<p style='font-size: .6em'>Digite somente nome e extenção exemplo: imagem.jpg</p>
-					<p style='font-size: .6em'>Salvar imagem em: UC12_site_cinema\img\posters</p>
-        		</div>
-				
-				
- 				</fieldset>	
- 				
- 				<fieldset class='grupo'>
-					<div class='campo'>
-						<label for='emCartaz'>Estatus do filme:*</label><br>
-						<input type='radio' id='emCartaz' name='emCartaz' value='sim' checked> Em cartaz	
-						<br>
-						<input type='radio' id='emCartaz' name='emCartaz' value='nao'> Em breve	
-						<br>
-						<input type='radio' id='emCartaz' name='emCartaz' value='off' > Já lançado
-					</div>		
-
- 				</fieldset>	
-
- 				<fieldset>
-					<button type='submit' name='submit'>Cadastrar filme</button>
- 				</fieldset>	
- 
-    		</fieldset>
-		</form>
-	
-		<?php 
-			echo "<i>Campos marcados com <b>*</b> são obrigatórios no cadastro.<br>
-			<b>Observação</b>: Será inserido no seu cadastro a data atual, bem como a hora atual do cadastro<br>Data: $novadata - Hora: $novahora<br>";
-		?>			
-						
-						
-	</section>
+					</script>								
+					
+    <div class="row">
+      <div class="col-25">
+        <label for="poster">Poster do filme</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="poster" placeholder="Ex: filme_tal.jpg">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="emCartaz">Estatus do filme</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="emCartaz">
+          <option value="sim">Em cartaz</option>
+          <option value="nao">Em breve</option>
+          <option value="off">Já lançado</option>
+        </select>
+      </div>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+    <div class="row">
+      <input type="submit" value="Submit" name='submit'>
+    </div>
+  </form>
+</div>
 
 	
 </div>	
