@@ -92,20 +92,20 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
       </div>
     </div>
     
-    <div class="row">
+    <div class="row_small">
       <div class="col-25">
         <label for="duracao">Duração</label>
       </div>
-      <div class="col-75">
+      <div class="col-25">
         <input type="number" id="lname" name="duracao" placeholder="Duração">
       </div>
     </div>
     
-    <div class="row">
+    <div class="row_small">
       <div class="col-25">
         <label for="genero">Gênero</label>
       </div>
-      <div class="col-75">
+      <div class="col-25">
         <select id="country" name="genero">
          
          <?php

@@ -60,93 +60,93 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
 	
 </nav>		
 
-		<section>
-		
-		<h1>Cadastro de notícias e artigos para o site</h1>	
-				
-		<form action='config/bdinserirnoticia.php?autor=<?php echo "".$_SESSION['id']."";?>' method='post'>		
-			<fieldset>
-				<fieldset class='grupo'>
-				
-					<div class='campo'>
-						<p>Autor da notícia ou artigo:</p>
-						
-						<?php
+<h2>Cadastro de notícias e artigos para o site</h2>
+<p>Insira todos os dados corretamente.</p>
+
+<div class="container">
+  <form action='config/bdinserirnoticia.php?autor=<?php echo "".$_SESSION['id']."";?>' method='post' accept-charset="UTF-8">
+   
+    <div class="row_small">
+      <div class="col-25">
+        <label for="autor">Autor da notícia</label>
+      </div>
+      <div class="col-25">
+       
+       <?php
 							if(isset($_SESSION['aberta'])) {	// Verifica se usuário já está logado			
 							include("config/conectar.php");					
-							echo "<h2>" . $_SESSION['nome'] . "</h2>";
+							echo "<input type='text' id='fname' name='autor' value=".$_SESSION['nome'].">";
 							}
 						?>
 
-           			</div>
- 				</fieldset>
-             
-             <fieldset class='grupo'>
-              
-              <div class='campo'>
-					<label for='tipo'>Tipo*</label>
-					<input type='radio' id='tipo' name='tipo' value='1'>Notícia
-          			<br>
-           			<input type='radio' id='tipo' name='tipo' value='2'>Outro
-            	</div>
-           		
-           		<div class='campo'>
-					<label for='titulo'>Título*</label>
-					<input type='text' id='titulo' name='titulo' style='width: 30em' value=''>
-           		</div>
-				
-				<div class='campo'>
-					<label for='subtitulo'>Subtitulo*</label>
-					<input type='text' id='subtitulo' name='subtitulo' style='width: 30em' value=''>
-           		</div>
-				
-				<div class='campo'>
-            		<label for='texto'>Texto*</label>
-           	 		<textarea rows='50' style='width: auto' id='texto'  name='texto'></textarea>
-           	 		
-           	 	<!--EDITOR DE CÓDIGO-->	
+      </div>
+    </div>
+    
+    <div class="row_small">
+      <div class="col-25">
+        <label for="tipo">Tipo</label>
+      </div>
+      <div class="col-25">
+        <select id="country" name="tipo">
+          <option value="1">Notícia</option>
+          <option value="2">Outro</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="titulo">Título notícia</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="titulo" placeholder="Digite o título da notícia..">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="subtitulo">Subtítulo notícia</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="subtitulo" placeholder="Digite o subtítulo da notícia..">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="texto">Texto</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="texto" placeholder="Digite aqui o texto da matéria.." style="height:200px"></textarea>
+      </div>
+    </div>
+    
+    <!--EDITOR DE CÓDIGO-->	
            	 	<script src="ckeditor/ckeditor.js"></script>
            	 	
            	 		<script>
 						CKEDITOR.replace( 'texto' );
 					</script>
-
-           	 		
-        		</div>
-  
-				</fieldset>
- 				
- 				<fieldset class='grupo'>
- 				
- 				<div class='campo'>
-            		<label for='img'>Imagem para notícia ou artigo*</label>
-           			<input type='text' id='img' name='img' style='width: 30em' value=''>
-					<p style='font-size: .6em'>Digite somente nome e extenção, exemplo: imagem.jpg</p>
-					<p style='font-size: .6em'>Salvar imagem para notícia em: UC12_site_cinema\img\noticias</p>
-       				<p style='font-size: .6em'>Salvar imagem para artigo em: UC12_site_cinema\img\noticias\artigos</p>
-        		</div>
-        		
-        		
-        		<div class='campo'>
-					<label for='destaque'>Destaque?*</label>
-					<input type='radio' id='destaque' name='destaque' value='on'>Sim, mostrar em destaque no Home
-          			<br>
-           			<input type='radio' id='destaque' name='destaque' value='off'>Não, somente cadastrar em notícias
-            	</div>
-        		
-        		<div class='campo'>
-            		<label for='imgDestaque'>Imagem de destaque</label>
-           			<input type='text' id='imgDestaque' name='imgDestaque' style='width: 30em' value=''>
-					<p style='font-size: .6em'>Salvar imagem destaque em: UC12_site_cinema\img\slideshow</p>
-        		</div>
- 				</fieldset>	
- 				
-
- 				<fieldset class='grupo'>
- 				
- 					<?php
+								
+					
+    <div class="row">
+      <div class="col-25">
+        <label for="img">Imagem da notícia</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="img" placeholder="Ex: noticia_tal.jpg">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="relacionado">Filme relacionado</label>
+      </div>
+      <div class="col-75">
+          
+          <?php
 				
-						include_once('config/conectar.php');
+				include_once('config/conectar.php');
 
 
 					if (!$strcon) {
@@ -158,7 +158,7 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
 					if (mysqli_num_rows($resultado)!=0){
 
  					echo "<select name='relacionado'>
- 						<option value='' selected='selected'>Selecione o filme relacionado:*</option>";
+ 						<option value='' selected='selected'>Filme relacionado:</option>";
  						while($elemento = mysqli_fetch_array($resultado))
  						{
    						$filmeId = $elemento['id'];
@@ -173,28 +173,42 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
 					
 					
 				    ?>	
- 				
- 					</select> 
- 				
- 				</fieldset>
-
-				
-				
-
- 				<fieldset>
-					<button type='submit' name='submit'>Cadastrar filme</button>
- 				</fieldset>	
- 
-    		</fieldset>
-		</form>
-	
-		<?php 
-			echo "<i>Campos marcados com <b>*</b> são obrigatórios no cadastro.<br>
-			<b>Observação</b>: Será inserido no seu cadastro a data atual, bem como a hora atual do cadastro<br>Data: $novadata - Hora: $novahora<br>";
-		?>		
-
-		
-	</section>
+        </select>
+      </div>
+    </div>
+    
+    
+    <div class="row_small">
+      <div class="col-25">
+        <label for="destaque">Destaque em Home?</label>
+      </div>
+      <div class="col-25">
+        <select id="country" name="destaque">
+          <option value="on">Sim, destacar!</option>
+          <option value="off" selected>Não destacar!</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="row_small">
+      <div class="col-25">
+        <label for="imgDestaque">Imagem de destaque</label>
+      </div>
+      <div class="col-25">
+        <input type="text" id="lname" name="imgDestaque" placeholder="Ex: noticia_tal_destaque.jpg">
+      </div>
+    </div>
+    
+    
+    <br>
+    <br>
+    
+    
+    <div class="row">
+      <input type="submit" value="Submit" name='submit'>
+    </div>
+  </form>
+</div>		
 
 	
 </div>	

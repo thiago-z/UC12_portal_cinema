@@ -111,7 +111,7 @@ echo "<div class='lista_filmes_container'>
 	
 	<div class='gerenciar_filmes'>
 	
-		<div><a href='editar.php?id=$id'><i class='fas fa-edit'></i><br>Editar</a></div>";
+		<div><a href='editarNoticia.php?id=$id'><i class='fas fa-edit'></i><br>Editar</a></div>";
 		
 	
 	//MOSTRAR DESVALIDAR

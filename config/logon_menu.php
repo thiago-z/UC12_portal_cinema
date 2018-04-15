@@ -8,7 +8,7 @@
 	if(isset($_SESSION['aberta'])) {	// Verifica se usuário já está logado			
 		include("config/conectar.php");					
 		echo "<p>" . $_SESSION['nome'] . "</p>";
-		include("menu.php");	
+		include("../menu.php");	
 	}
 	else { // Se não estiver logado, pede para logar ou cadastrar usuário
 		echo "Efetue login abaixo para cadastrar conteúdo no site<br>";
