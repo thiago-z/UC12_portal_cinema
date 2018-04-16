@@ -5,6 +5,16 @@ if(!isset($_SESSION['aberta'])) {
 }
 ?>
 
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Editar</title>
+	<meta name="viewport" content="initial-scale=1">
+<link href="css/estilo.css" rel="stylesheet" type="text/css">
+<link href="css/estilo_formulario.css" rel="stylesheet" type="text/css">
+
+
 <?php
 
 //Data e horo devidamente configurados	
@@ -16,16 +26,6 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
 "min"; 
 ?>
 
-
-
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Editar</title>
-	<meta name="viewport" content="initial-scale=1">
-<link href="css/estilo.css" rel="stylesheet" type="text/css">
-<link href="css/estilo_formulario.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -33,110 +33,47 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
 <header id="login">
 	
 	<div id="portal_id">
-		
-		<!--PARTE SUPERIOR COM LOGON E MENU MOVIDO PARA ARQUIVO SEPARADO-->
+	<!--PARTE SUPERIOR COM LOGON E MENU MOVIDO PARA ARQUIVO SEPARADO-->
 	<?php
 		
-		include('config/logon_menu.php');
+		include('logon_menu.php');
 		
 	?>
+		
 		
 	</div>
 		
 </header>
-<div id="pginicial">						
-						
+<div id="pginicial">
+		
+		
+<nav class="submenu">
 	
-	<?php
-// Incluir o arquivo d coexao ao bano de dados
-include_once("config/conectar.php");
-
-if(isset($_POST['update'])){
-	$nome = $_POST["nome"];
-	$nomeOriginal = $_POST["nomeOriginal"];
-	$estreia = $_POST["estreia"];
-	$duracao = $_POST["duracao"];
-	$genero = $_POST["genero"];
-	$paisOrigem = $_POST["paisOrigem"];
-	$direcao = $_POST["diretor"];
-	$elenco = $_POST["elenco"];
-	$sinopse = $_POST["sinopse"];
-	$imgPoster = $_POST["poster"];
-	$cartaz = $_POST["emCartaz"]; 
+	<ul>
+		
+		<li><a href="index.php">Voltar para Home</a></li>
+		<li><a href="verNoticias.php">Visualizar notícias</a></li>
+		
+	</ul>
 	
-	if (empty($nome) ||  empty($nomeOriginal) ||  empty($estreia) || empty($duracao) ||  empty($paisOrigem) ||  empty($direcao) ||  empty($elenco) || empty($sinopse) ||  empty($imgPoster) ||  empty($cartaz)){
-		
-		if(empty($nome)){
-			echo "<strong>Campo Nome está vazio.</strong><br>";
-		}
-		if(empty($nomeOriginal)){
-			echo "<strong>Campo Quantidade está vazio.</strong><br>";
-		}
-		
-		if(empty($estreia)){
-			echo "<strong>Campo Preço está vazio.</strong><br>";
-		}
-		
-		if(empty($duracao)){
-			echo "<strong>Campo Nome está vazio.</strong><br>";
-		}
-		
-		if(empty($paisOrigem)){
-			echo "<strong>Campo Preço está vazio.</strong><br>";
-		}
-		
-		if(empty($direcao)){
-			echo "<strong>Campo Nome está vazio.</strong><br>";
-		}
-		if(empty($elenco)){
-			echo "<strong>Campo Quantidade está vazio.</strong><br>";
-		}
-		
-		if(empty($sinopse)){
-			echo "<strong>Campo Preço está vazio.</strong><br>";
-		}
-		
-		if(empty($imgPoster)){
-			echo "<strong>Campo Nome está vazio.</strong><br>";
-		}
-		if(empty($cartaz)){
-			echo "<strong>Campo Quantidade está vazio.</strong><br>";
-		}
-		
-		
-		//link para a pagina anterior
-		echo "<br><a href='javascript:self.history.back();'>Voltar</a>";
+</nav>		
 
-	}else{
-		//Atualizando a tabela
-		$result = mysqli_query($strcon, "UPDATE produtos SET nome='$nome', qtde='$qtde', preco='preco' WHERE id='$id'");
-		
-		//Redericionar para a pagina de visualizacao -> ver.php
-		header("Location: verFilme.php");
-	}
-}
-?>
- 
-	
-<a href="index.php">Home</a>  | <a href="verFilmes.php">Ver Produtos</a> | <a href="logout.php">Logout</a>
-	 <br><br>
+<h2>Editar filme selecionado</h2>
+<p>Insira todos os dados corretamente.</p>
 
-	 
-	 	 
-	<section class='formulario'>										
 
 <?php
-//Inclui o arquivo de conexao ao banco de dados
-include_once("config/conectar.php");
+	//Incluir o arquivo de conexão ao banco de dados:
+	include_once("config/conectar.php");
+	
+	$idFilme = $_GET["id"];
 
-
- //Obtendo o  id a partir da URL
- $id = $_GET['id'];
- 
- //Selecionando dados associados com o id em oarticular
- $result = mysqli_query($strcon, "SELECT * FROM filmes WHERE id=$id");
- 
- while($res = mysqli_fetch_array($result)){
+	
+	//buscar os dados em ordem descrescente (entrada mais recente primeiro)
+	$result = mysqli_query($strcon, "SELECT * FROM filmes WHERE id = $idFilme");
+	
+	while($linha = mysqli_fetch_array($result)) {
+	
 	$nome = $_POST["nome"];
 	$nomeOriginal = $_POST["nomeOriginal"];
 	$estreia = $_POST["estreia"];
@@ -148,47 +85,59 @@ include_once("config/conectar.php");
 	$sinopse = $_POST["sinopse"];
 	$imgPoster = $_POST["poster"];
 	$cartaz = $_POST["emCartaz"]; 
-	 
- 
-	 
-	
-		echo "<h1>Cadastro filme</h1>	
-				
-		<form action='bdinserirfilme.php' method='post' accept-charset='UTF-8'>		
-			<fieldset>
-				<fieldset class='grupo'>
- 
-                <div class='campo'>
-					<label for='nome'>Nome nacional*</label>
-					<input type='text' id='nome' name='nome' style='width: 30em' value='$nome' required>
-            	</div>
-           		<div class='campo'>
-					<label for='nomeOriginal'>Nome original*</label>
-					<input type='text' id='nomeOriginal' name='$nomeOriginal' style='width: 30em' value=''>
-           		</div>
-				
-				</fieldset>
-				
-				<fieldset class='grupo'>
-        		<div class='campo'>
-            		<label for='estreia'>Estréia*</label>
-           			<input type='text' id='estreia' name='estreia' style='width: 10em' value= '$estreia'>
-        		</div>
-					
-				<div class='campo'>
-            		<label for='duracao'>Duração*</label>
-           			<input type='number' id='duracao' name='duracao' style='width: 10em' value=''>
-        		</div>	
-        		
-        		
-        		<div class='campo'>
-            		<label for='genero'>Gênero*</label>";
-            		
- ?>       		
-<?php				
-					include_once('config/conectar.php');
+?>
 
 
+<div class="container">
+  <form action='bdatualizarfilme.php?editar=<?php echo $id?>&autor=<?php echo "".$_SESSION['id']."";?>' method='post' accept-charset="UTF-8">
+   
+    
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="nome">Título nacional</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="nome" value="<?php echo"$nome"?>">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="nomeOriginal">Título original</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="nomeOriginal" value="<?php echo"$nomeOriginal"?>">
+      </div>
+    </div>
+    
+    <div class="row_small">
+      <div class="col-25">
+        <label for="estreia">Lançamento</label>
+      </div>
+      <div class="col-25">
+        <input type="text" id="lname" name="estreia" value="<?php echo"$subtitulo"?>">
+      </div>
+    </div>
+    
+    <div class="row_small">
+      <div class="col-25">
+        <label for="duracao">Duração</label>
+      </div>
+      <div class="col-25">
+        <input type="number" id="lname" name="duracao" value="<?php echo"$imgDestaque"?>">
+      </div>
+    </div>
+    
+    <div class="row_small">
+      <div class="col-25">
+        <label for="genero">Filme relacionado</label>
+      </div>
+      <div class="col-25">
+          
+          <?php
+				
+				include_once('config/conectar.php');
 
 					if (!$strcon) {
  					die('Não foi possível conectar ao MySQL');
@@ -206,73 +155,91 @@ include_once("config/conectar.php");
 						}
 
 						}
-				   
 
-        		echo "</div>
-
-				<div class='campo'>
-            		<label for='paisOrigem'>País de origem*</label>
-           			<input type='text' id='paisOrigem' name='paisOrigem' style='width: 30em' value=''>
-        		</div>	
+				    ?>	
+        </select>
+      </div>
+    
+    <div class="row_small">
+      <div class="col-25">
+        <label for="duracao">Duração</label>
+      </div>
+      <div class="col-25">
+        <input type="number" id="lname" name="duracao" value="<?php echo"$imgDestaque"?>">
+      </div>
+    </div>
+    
+    
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="estreia">Lançamento</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="estreia" value=<?php echo "$texto"?> </textarea>
+      </div>
+    </div>
+    
+    <!--EDITOR DE CÓDIGO-->	
+           	 	<script src="ckeditor/ckeditor.js"></script>
+           	 	
+           	 		<script>
+						CKEDITOR.replace( 'texto' );
+					</script>
+								
 					
-            	<div class='campo'>
-                	<label for='diretor'>Direção*</label>
-               		<input type='text' id='diretor' name='diretor' style='width: 30em' value=''>
-            	</div>
-					
-        		<div class='campo'>
-            		<label for='elenco'>Elenco*</label>
-           	 		<textarea rows='6' style='width: 30em' id='elenco' name='elenco'></textarea>
-        		</div>
-					
-       			<div class='campo'>
-            		<label for='sinopse'>Sinopse*</label>
-           	 		<textarea rows='10' style='width: 30em' id='sinopse' name='sinopse'></textarea>
-        		</div>
-				
-				<div class='campo'>
-            		<label for='poster'>Poster*</label>
-           			<input type='text' id='poster' name='poster' style='width: 30em' value=''>
-					<p style='font-size: .6em'>Digite somente nome e extenção exemplo: imagem.jpg</p>
-					<p style='font-size: .6em'>Salvar imagem em: UC12_site_cinema\img\posters</p>
-        		</div>
-				
-				
- 				</fieldset>	
- 				
- 				<fieldset class='grupo'>
-					<div class='campo'>
-						<label for='emCartaz'>Estatus do filme:*</label><br>
-						<input type='radio' id='emCartaz' name='emCartaz' value='sim'> Em cartaz	
-						<br>
-						<input type='radio' id='emCartaz' name='emCartaz' value='nao'> Em breve	
-						<br>
-						<input type='radio' id='emCartaz' name='emCartaz' value='off' > Já lançado
-					</div>		
+    <div class="row">
+      <div class="col-25">
+        <label for="img">Imagem da notícia</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="img" value="<?php echo"$imgnoticia"?>">
+      </div>
+    </div>
+    
+    
+    <div class="row_small">
+      <div class="col-25">
+        <label for="destaque">Destaque em Home?</label>
+      </div>
+      <div class="col-25">
+        <select id="country" name="destaque">
+          <option value="on">Sim, destacar!</option>
+          <option value="off" selected>Não destacar!</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="row_small">
+      <div class="col-25">
+        <label for="imgDestaque">Imagem de destaque</label>
+      </div>
+      <div class="col-25">
+        <input type="text" id="lname" name="imgDestaque" value="<?php echo"$imgDestaque"?>">
+      </div>
+    </div>
+    
+    
+    <br>
+    <br>
+    
+    
+    <div class="row">
+      <input type="submit" value="Submit" name='submit'>
+    </div>
+  </form>
+</div>		
 
- 				</fieldset>	
 
- 				<fieldset>
-					<button type='submit' name='update'>Cadastrar filme</button>
- 				</fieldset>	
- 
-    		</fieldset>
-		</form>
 	
-		
-			<i>Campos marcados com <b>*</b> são obrigatórios no cadastro.<br>
-			<b>Observação</b>: Será inserido no seu cadastro a data atual, bem como a hora atual do cadastro<br>Data: $novadata - Hora: $novahora<br>";
-	}	
-		?>			
-						
-
-	
-	</section>	
+<?php
+//FIM DO PHP QUE PUXA OS DADOS DA NOTÍCIA		
+}
+?>
+				
 </div>	
 	
 <footer>
 	<p>2018 Todos os direitos reservados</p>
 </footer>
 </main>
-</body>
-</html>
