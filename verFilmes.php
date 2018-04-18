@@ -27,7 +27,7 @@ if(!isset($_SESSION['aberta'])) {
 		<!--PARTE SUPERIOR COM LOGON E MENU MOVIDO PARA ARQUIVO SEPARADO-->
 	<?php
 		
-		include('config/logon_menu.php');
+		include('logon_menu.php');
 		
 	?>
 		
@@ -100,7 +100,7 @@ echo "<div class='lista_filmes_container'>
 	
 	<div class='gerenciar_filmes'>
 	
-		<div><a href='editar.php?id=$id'><i class='fas fa-edit'></i><br>Editar</a></div>
+		<div><a href='editarFilme.php?id=$id'><i class='fas fa-edit'></i><br>Editar</a></div>
 		
 		<div><a href='excluirFilme.php?id=$id'><i class='fas fa-trash-alt'></i><br>Excluir</a></div>
 		

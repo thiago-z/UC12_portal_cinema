@@ -65,7 +65,7 @@ else {
 		
 	<div>
 	
-		<form method="POST" action="">
+		<form method="POST" action="" id="form_login">
             <h2>Área Restrita</h2>
             <br>
             <label>Nome de Usuário</label>

@@ -11,8 +11,12 @@ if(!isset($_SESSION['aberta'])) {
 <meta charset="utf-8">
 <title>Visualizar</title>
 	<meta name="viewport" content="initial-scale=1">
-<link href="css/estilo.css" rel="stylesheet" type="text/css">
-<link href="css/estilo_formulario.css" rel="stylesheet" type="text/css">
+<link href="../css/estilo.css" rel="stylesheet" type="text/css">
+<link href="../css/estilo_formulario.css" rel="stylesheet" type="text/css">
+
+<script defer src="../js/fontawesome/fontawesome-all.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -24,7 +28,7 @@ if(!isset($_SESSION['aberta'])) {
 		<!--PARTE SUPERIOR COM LOGON E MENU MOVIDO PARA ARQUIVO SEPARADO-->
 	<?php
 		
-		include('config/logon_menu.php');
+		include('logon_menu.php');
 		
 	?>
 		
@@ -33,13 +37,23 @@ if(!isset($_SESSION['aberta'])) {
 </header>
 <div id="pginicial">						
 						
-	<section>
+	<div id="pginicial">						
+						
+<section>
+	
+	
 	<?php
-//Inclui o arquivo de conexao ao banco de dados
-include_once("conectar.php");
 
-if(isset($_POST['submit'])){
-	$nome = $_POST["nome"];
+//conectar ao banco de dados
+include 'conectar.php';
+
+
+//Vamos definir as variáveis de data e hora
+//para inserção no banco de dados
+
+
+//vamos criar uma variável especial para a querie sql	
+$nome = $_POST["nome"];
 $nomeOriginal = $_POST["nomeOriginal"];
 $estreia = $_POST["estreia"];
 $duracao = $_POST["duracao"];
@@ -49,71 +63,34 @@ $direcao = $_POST["diretor"];
 $elenco = $_POST["elenco"];
 $sinopse = $_POST["sinopse"];
 $imgPoster = $_POST["poster"];
-$cartaz = $_POST["emCartaz"]; 
-	
-	if (empty($nome) ||  empty($nomeOriginal) ||  empty($estreia) || empty($duracao) ||  empty($paisOrigem) ||  empty($direcao) ||  empty($elenco) || empty($sinopse) ||  empty($imgPoster) ||  empty($cartaz)){
-		
-		if(empty($nome)){
-			echo "<strong>Campo Nome está vazio.</strong><br>";
-		}
-		if(empty($nomeOriginal)){
-			echo "<strong>Campo Quantidade está vazio.</strong><br>";
-		}
-		
-		if(empty($estreia)){
-			echo "<strong>Campo Preço está vazio.</strong><br>";
-		}
-		
-		if(empty($duracao)){
-			echo "<strong>Campo Nome está vazio.</strong><br>";
-		}
-		
-		if(empty($paisOrigem)){
-			echo "<strong>Campo Preço está vazio.</strong><br>";
-		}
-		
-		if(empty($direcao)){
-			echo "<strong>Campo Nome está vazio.</strong><br>";
-		}
-		if(empty($elenco)){
-			echo "<strong>Campo Quantidade está vazio.</strong><br>";
-		}
-		
-		if(empty($sinopse)){
-			echo "<strong>Campo Preço está vazio.</strong><br>";
-		}
-		
-		if(empty($imgPoster)){
-			echo "<strong>Campo Nome está vazio.</strong><br>";
-		}
-		if(empty($cartaz)){
-			echo "<strong>Campo Quantidade está vazio.</strong><br>";
-		}
-		
-		
-		//link para a pagina anterior
-		echo "<br><a href='javascript:self.history.back();'>Voltar</a>";
+$cartaz = $_POST["emCartaz"];
 
-	}else{
-		//Se todos os campos estiverem preenchidos (não-vazios)
-		//Inserir os dados no banco de dados
-		$result = mysqli_query($strcon, "INSERT INTO filmes (nome, nomeOriginal, estreia, duracao, genero, paisOrigem, diretor, elenco, sinopse, poster, emCartaz) VALUES ('$nome', '$nomeOriginal', '$estreia', '$duracao', '$genero', '$paisOrigem', '$direcao', '$elenco', '$sinopse', '$imgPoster', '$cartaz')");
-		
 
-		echo "'$resultGenero'";
-		
-		//Mostrar mensagem de sucesso na operação
-		echo "<strong>Item adicionado com sucesso!</strong><br>";
-		echo "<br><a href='verFilmes.php'>Visualizar Produtos</a>";
-	
-	}
-	
-}
-	
+$sql = "INSERT INTO filmes (nome, nomeOriginal, estreia, duracao, genero, paisOrigem, diretor, elenco, sinopse, poster, emCartaz) VALUES ('$nome', '$nomeOriginal', '$estreia', '$duracao', '$genero', '$paisOrigem', '$direcao', '$elenco', '$sinopse', '$imgPoster', '$cartaz')";
+
+
+mysqli_query($strcon,$sql) or die("Erro no cadastro");
+
+mysqli_close($strcon);
+
+
+
+//Substitua os valores acima caso não esteje de acordo com sua máquina
+//Selecionando o banco de dados...
+
+//
+
+//Inserindo os dados
+
+
+echo "<h1>Filme cadastrado com sucesso!</h1>";
+echo "<br><br>";
+echo "<p>Para cadastrar outro filme clique <a href='../adicionarFilme.php'><b>aqui</b>.<a></p>";
 ?>
 	
 </section>
-		
+	
+	
 </div>	
 	
 <footer>

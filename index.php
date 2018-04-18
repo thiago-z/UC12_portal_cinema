@@ -22,7 +22,7 @@
 		<!--PARTE SUPERIOR COM LOGON E MENU MOVIDO PARA ARQUIVO SEPARADO-->
 	<?php
 		
-		include('config/logon_menu.php');
+		include('logon_menu.php');
 		
 	?>
 		

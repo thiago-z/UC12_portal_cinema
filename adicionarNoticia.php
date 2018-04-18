@@ -38,7 +38,7 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
 	<!--PARTE SUPERIOR COM LOGON E MENU MOVIDO PARA ARQUIVO SEPARADO-->
 	<?php
 		
-		include('config/logon_menu.php');
+		include('logon_menu.php');
 		
 	?>
 		
@@ -64,7 +64,7 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
 <p>Insira todos os dados corretamente.</p>
 
 <div class="container">
-  <form action='config/bdinserirnoticia.php?autor=<?php echo "".$_SESSION['id']."";?>' method='post' accept-charset="UTF-8">
+  <form action='bdinserirnoticia.php?autor=<?php echo "".$_SESSION['id']."";?>' method='post' accept-charset="UTF-8">
    
     <div class="row_small">
       <div class="col-25">

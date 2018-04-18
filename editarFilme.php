@@ -9,7 +9,7 @@ if(!isset($_SESSION['aberta'])) {
 <html>
 <head>
 <meta charset="utf-8">
-<title>Editar</title>
+<title>Editar Filme</title>
 	<meta name="viewport" content="initial-scale=1">
 <link href="css/estilo.css" rel="stylesheet" type="text/css">
 <link href="css/estilo_formulario.css" rel="stylesheet" type="text/css">
@@ -52,13 +52,13 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
 	<ul>
 		
 		<li><a href="index.php">Voltar para Home</a></li>
-		<li><a href="verNoticias.php">Visualizar notícias</a></li>
+		<li><a href="verFilmes.php">Visualizar filmes</a></li>
 		
 	</ul>
 	
 </nav>		
 
-<h2>Editar filme selecionado</h2>
+<h2>Editar notícia ou artigo selecionado</h2>
 <p>Insira todos os dados corretamente.</p>
 
 
@@ -74,6 +74,7 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
 	
 	while($linha = mysqli_fetch_array($result)) {
 	
+	$id = $linha["id"];	
 	$nome = $_POST["nome"];
 	$nomeOriginal = $_POST["nomeOriginal"];
 	$estreia = $_POST["estreia"];
@@ -89,13 +90,13 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
 
 
 <div class="container">
-  <form action='bdatualizarfilme.php?editar=<?php echo $id?>&autor=<?php echo "".$_SESSION['id']."";?>' method='post' accept-charset="UTF-8">
+  <form action='bdatualizarfilme.php?editar=<?php echo $idFilme?>' method='post' accept-charset="UTF-8">
    
     
     
     <div class="row">
       <div class="col-25">
-        <label for="nome">Título nacional</label>
+        <label for="nome">Título notícia</label>
       </div>
       <div class="col-75">
         <input type="text" id="lname" name="nome" value="<?php echo"$nome"?>">
@@ -104,79 +105,19 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
     
     <div class="row">
       <div class="col-25">
-        <label for="nomeOriginal">Título original</label>
+        <label for="nomeOriginal">Subtítulo notícia</label>
       </div>
       <div class="col-75">
         <input type="text" id="lname" name="nomeOriginal" value="<?php echo"$nomeOriginal"?>">
       </div>
     </div>
     
-    <div class="row_small">
-      <div class="col-25">
-        <label for="estreia">Lançamento</label>
-      </div>
-      <div class="col-25">
-        <input type="text" id="lname" name="estreia" value="<?php echo"$subtitulo"?>">
-      </div>
-    </div>
-    
-    <div class="row_small">
-      <div class="col-25">
-        <label for="duracao">Duração</label>
-      </div>
-      <div class="col-25">
-        <input type="number" id="lname" name="duracao" value="<?php echo"$imgDestaque"?>">
-      </div>
-    </div>
-    
-    <div class="row_small">
-      <div class="col-25">
-        <label for="genero">Filme relacionado</label>
-      </div>
-      <div class="col-25">
-          
-          <?php
-				
-				include_once('config/conectar.php');
-
-					if (!$strcon) {
- 					die('Não foi possível conectar ao MySQL');
-					}
- 					$sql = 'SELECT * FROM generos ORDER BY idGenero';
-					$resultado = mysqli_query($strcon,$sql) or die(mysql_error().'<br>Erro ao executar a inserção dos dados');
-
-					if (mysqli_num_rows($resultado)!=0){
-
- 						while($elemento = mysqli_fetch_array($resultado))
- 						{
-   						$idgenero = $elemento['idGenero'];
-						$genero = $elemento['nomeGenero'];
-   						echo "<input type='checkbox' name='genero' value='$genero'> $genero<br>";
-						}
-
-						}
-
-				    ?>	
-        </select>
-      </div>
-    
-    <div class="row_small">
-      <div class="col-25">
-        <label for="duracao">Duração</label>
-      </div>
-      <div class="col-25">
-        <input type="number" id="lname" name="duracao" value="<?php echo"$imgDestaque"?>">
-      </div>
-    </div>
-    
-    
-    
     <div class="row">
       <div class="col-25">
-        <label for="estreia">Lançamento</label>
+        <label for="texto">Texto</label>
       </div>
       <div class="col-75">
-        <textarea id="subject" name="estreia" value=<?php echo "$texto"?> </textarea>
+        <textarea id="subject" name="texto" value=<?php echo "$texto"?> </textarea>
       </div>
     </div>
     
@@ -194,6 +135,45 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
       </div>
       <div class="col-75">
         <input type="text" id="lname" name="img" value="<?php echo"$imgnoticia"?>">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="relacionado">Filme relacionado</label>
+      </div>
+      <div class="col-75">
+          
+          <?php
+				
+				include_once('config/conectar.php');
+
+
+					if (!$strcon) {
+ 					die('Não foi possível conectar ao MySQL');
+					}
+ 					$sql = "SELECT * FROM filmes ORDER BY id";
+					$resultado = mysqli_query($strcon,$sql) or die(mysql_error()."<br>Erro ao executar a inserção 					dos dados");
+
+					if (mysqli_num_rows($resultado)!=0){
+
+ 					echo "<select name='relacionado'>
+ 						<option value='' selected='selected'>Selecionar filme..</option>";
+ 						while($elemento = mysqli_fetch_array($resultado))
+ 						{
+   						$filmeId = $elemento['id'];
+						$filmeNome = $elemento['nome'];
+   						echo '<option value="'.$filmeId.'">'.$filmeNome.'</option>';
+						}
+
+						}
+					
+					echo "<input name='data' type='hidden' value='$novadata'>
+					<input name='hora' type='hidden' value='$novahora'>";
+					
+					
+				    ?>	
+        </select>
       </div>
     </div>
     

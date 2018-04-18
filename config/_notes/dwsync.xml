@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="conectar.php" server="192.168.1.10//var/www/html/" local="131673383016347536" remote="131673490800000000" Dst="1" />
-<file name="bdinserirfilme.php" server="192.168.1.10//var/www/html/" local="131677839680109571" remote="131677947600000000" Dst="1" />
-<file name="bdinserirnoticia.php" server="192.168.1.10//var/www/html/" local="131675380421264654" remote="131675488200000000" Dst="1" />
-<file name="registro_bd.php" server="192.168.1.10//var/www/html/" local="131674567931955103" remote="131674678200000000" Dst="1" />
-<file name="logon_menu.php" server="192.168.1.10//var/www/html/" local="131682370266863408" remote="131682478200000000" Dst="1" />
-<file name="logout.php" server="192.168.1.10//var/www/html/" local="131677795596908356" remote="131677903200000000" Dst="1" />
-<file name="verNoticias.php" server="192.168.1.10//var/www/html/" local="131677845047568745" remote="131675248200000000" Dst="1" />
-<file name="bdatualizarnoticia.php" server="192.168.1.10//var/www/html/" local="131682363266356695" remote="131682471000000000" Dst="1" />
+<file name="conectar.php" server="192.168.1.10//var/www/html/" local="131683630660000000" remote="131683854600000000" Dst="1" />
+<file name="logout.php" server="192.168.1.10//var/www/html/" local="131683630660000000" remote="131683854600000000" Dst="1" />
 </dwsync>

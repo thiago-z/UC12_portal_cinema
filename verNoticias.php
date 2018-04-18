@@ -8,14 +8,12 @@ if(!isset($_SESSION['aberta'])) {
 <!doctype html>
 <html>
 <head>
-
 <meta charset="utf-8">
 <title>Visualizar Notícias</title>
-<meta name="viewport" content="initial-scale=1">
+	<meta name="viewport" content="initial-scale=1">
+<link href="css/estilo.css" rel="stylesheet" type="text/css">
 <link href="css/estilo.css" rel="stylesheet" type="text/css">
 <link href="css/estilo_formulario_consulta.css" rel="stylesheet" type="text/css">
-
-<script defer src="js/fontawesome/fontawesome-all.js"></script>
 
 </head>
 
@@ -28,7 +26,7 @@ if(!isset($_SESSION['aberta'])) {
 	<!--PARTE SUPERIOR COM LOGON E MENU MOVIDO PARA ARQUIVO SEPARADO-->
 	<?php
 		
-		include('config/logon_menu.php');
+		include('logon_menu.php');
 		
 	?>
 		
@@ -36,7 +34,8 @@ if(!isset($_SESSION['aberta'])) {
 	</div>
 		
 </header>
-<div id="pg_filme_consulta">						
+
+	<div id="pg_filme_consulta">						
 						
 	<?php
 //Incluir o arquivo de conexão ao banco de dados:
@@ -145,7 +144,7 @@ $desvalidador = mysqli_query($strcon, "UPDATE noticias SET validar='off' WHERE i
 	
 		
 	
-</div>	
+</div>
 	
 <footer>
 	<p>2018 Todos os direitos reservados</p>
