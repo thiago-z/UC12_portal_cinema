@@ -64,9 +64,9 @@ $elenco = $_POST["elenco"];
 $sinopse = $_POST["sinopse"];
 $imgPoster = $_POST["poster"];
 $cartaz = $_POST["emCartaz"];
+$imgFundo = $_POST["imgFundo"];
 
-
-$sql = "INSERT INTO filmes (nome, nomeOriginal, estreia, duracao, genero, paisOrigem, diretor, elenco, sinopse, poster, emCartaz) VALUES ('$nome', '$nomeOriginal', '$estreia', '$duracao', '$genero', '$paisOrigem', '$direcao', '$elenco', '$sinopse', '$imgPoster', '$cartaz')";
+$sql = "INSERT INTO filmes (nome, nomeOriginal, estreia, duracao, genero, paisOrigem, diretor, elenco, sinopse, poster, emCartaz, imgFundo) VALUES ('$nome', '$nomeOriginal', '$estreia', '$duracao', '$genero', '$paisOrigem', '$direcao', '$elenco', '$sinopse', '$imgPoster', '$cartaz', '$imgFundo')";
 
 
 mysqli_query($strcon,$sql) or die("Erro no cadastro");

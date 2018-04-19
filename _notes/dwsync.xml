@@ -4,14 +4,14 @@
 <file name="login.php" server="192.168.1.10//var/www/html/" local="131683630510000000" remote="131685008400000000" Dst="1" />
 <file name="logout.php" server="192.168.1.10//var/www/html/" local="131683630510000000" remote="131685008400000000" Dst="1" />
 <file name="registrar.php" server="192.168.1.10//var/www/html/" local="131683630510000000" remote="131685008400000000" Dst="1" />
-<file name="bdinserirfilme.php" server="192.168.1.10//var/www/html/" local="131683630480000000" remote="131685007200000000" Dst="1" />
-<file name="verFilmes.php" server="192.168.1.10//var/www/html/" local="131683748616466124" remote="131685008400000000" Dst="1" />
+<file name="bdinserirfilme.php" server="192.168.1.10//var/www/html/" local="131685638967631500" remote="131685746400000000" Dst="1" />
+<file name="verFilmes.php" server="192.168.1.10//var/www/html/" local="131686519632893658" remote="131686627200000000" Dst="1" />
 <file name="verNoticias.php" server="192.168.1.10//var/www/html/" local="131683749040338452" remote="131685008400000000" Dst="1" />
 <file name="adicionarNoticia.php" server="192.168.1.10//var/www/html/" local="131683630480000000" remote="131685007200000000" Dst="1" />
 <file name="excluirFilme.php" server="192.168.1.10//var/www/html/" local="131683630490000000" remote="131685008400000000" Dst="1" />
 <file name="excluirNoticia.php" server="192.168.1.10//var/www/html/" local="131683630490000000" remote="131685008400000000" Dst="1" />
 <file name="editarFilme.php" server="192.168.1.10//var/www/html/" local="131683804170060632" remote="131685008400000000" Dst="1" />
-<file name="adicionarFilme.php" server="192.168.1.10//var/www/html/" local="131683630490000000" remote="131685007200000000" Dst="1" />
+<file name="adicionarFilme.php" server="192.168.1.10//var/www/html/" local="131685637882641878" remote="131685745800000000" Dst="1" />
 <file name="editarNoticia.php" server="192.168.1.10//var/www/html/" local="131683630490000000" remote="131685008400000000" Dst="1" />
 <file name="bdatualizarfilme.php" server="192.168.1.10//var/www/html/" local="131683756822531145" remote="131685007200000000" Dst="1" />
 <file name="bdatualizarnoticia.php" server="192.168.1.10//var/www/html/" local="131683630480000000" remote="131685007200000000" Dst="1" />

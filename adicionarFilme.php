@@ -196,6 +196,15 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
     
     <div class="row">
       <div class="col-25">
+        <label for="imgFundo">Imagem de fundo</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="imgFundo" placeholder="Ex: filme_tal_bio.jpg">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
         <label for="emCartaz">Estatus do filme</label>
       </div>
       <div class="col-75">

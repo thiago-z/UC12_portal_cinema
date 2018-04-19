@@ -76,7 +76,7 @@ if(!isset($_SESSION['aberta'])) {
 	$estreia = $linha["estreia"];	
 	$poster = $linha["poster"];
 	$emCartaz = $linha["emCartaz"];
-		
+	$duracao = $linha["duracao"];	
 				
 
 	
@@ -94,6 +94,7 @@ echo "<div class='lista_filmes_container'>
 		<div><h1>$tituloBR</h1></div>
 		<div><h2>$tituloOriginal</h2></div>
 		<div>$estreia</div>
+		<div>Duração: <b>$duracao</b>min</div>
 		<div>Em cartaz: <b>$emCartaz</b></div>
 		
 	</div>
