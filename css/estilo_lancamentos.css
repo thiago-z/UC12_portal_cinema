@@ -1,0 +1,188 @@
+@charset "utf-8";
+/* CSS Document */
+
+#lancamentos_topo {
+	position: relative;
+	width: 100%;
+	height: 250px;
+	background-color: #1E77B2;
+	overflow: hidden;
+}
+
+
+
+#corpo_lancamentos {
+	position: relative;
+	width: 87.84773060029283%; /*1200px de 1366px*/
+	height: auto;
+	/*background-color: grey;*/
+	margin: 0 auto;
+	float: none;
+	margin-bottom: 30px;
+	}
+
+#descricao_container{
+	position: relative;
+	width: 100%;
+	height: auto;
+	/*background-color: lemonchiffon;*/
+	margin: 0 auto;
+}
+
+
+
+/*FORMATAÇÃO DAS ABAS DE SELEÇÃO*/
+
+
+.TabControl{
+	width:100%; 
+	overflow:hidden; 
+	height:auto;
+}
+
+.TabControl #header{ 
+	width:100%; 
+	/*border: solid 1px; */
+	overflow:hidden; 
+	cursor:hand;
+}
+
+.TabControl #content{ 
+	width:100%; 
+	/*border: solid 1px;*/
+	/*overflow:hidden; */
+	height:auto; 
+	/*margin-top: 20px;*/
+}
+
+.TabControl .abas{
+	display:inline;
+}
+
+.TabControl .abas li{
+	float:left;
+}
+
+.aba{
+	width:auto; 
+	height:30px; 
+	/*border-bottom: solid 5px #095CAA; */
+	/*border-radius:5px 5px 0 0;*/
+	text-align:left; 
+	padding:5px 20px 0px 20px; 
+	background: #C0C0C0;
+	color: #000000;
+}
+
+.ativa{ /*ATIVA AO PASSAR MOUSE*/
+	width:auto; 
+	height:30px; 
+/*	border-bottom: solid 2px #44B4FF; */
+	/*border-radius:5px 5px 0 0;*/
+	text-align:left; 
+	padding:5px 20px 0px 20px; 
+	/*background: #27408B;*/
+}
+
+.ativa span, .selected span{
+	color: #1E76B2;
+	font-weight: bold;
+	border-bottom: solid 2px #1E76B2; 
+}
+
+.TabControl #content{
+	/*background:#27408B;*/
+}
+
+.TabControl .conteudo{
+	width:100%;  
+	/*background:#27408B; */
+	display:none; 
+	height:100%;
+	color:#000000;
+}
+
+.selected{
+	width:auto; 
+	height:30px; 
+	/*border-bottom: solid 5px #022958; */
+	/*border-radius:5px 5px 0 0;*/
+	text-align:center; 
+	padding:5px 20px 0px 20px; 
+	/*background:#27408B;*/
+}
+
+
+/*FORMATAÇÃO DO CONTEUDO DAS ABAS*/
+
+.conteudo {
+	position: relative;
+	width: 100%;
+	/*background-color: seagreen;*/
+	height: auto;
+}
+
+.conteudo section {
+	position: relative;
+	width: 100%;
+	background-color: #C0C0C0;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 5px;
+}
+
+.conteudo section figure {
+	width: 200px; 
+	height: auto;
+	line-height: 1em;
+	margin: 15px 8px;
+	
+}
+
+
+
+figure img {
+	width: 100%;
+	height: auto;
+	border: 1px solid #000000;
+	box-shadow: 2px 2px 4px #000000;
+}
+
+
+figcaption {
+	text-align: center;
+	color: #ffffff;
+	text-shadow: 1px 1px 2px #000000;
+}
+
+.poster {
+  display: inline-block;
+  height: auto;
+  position: relative;
+  width: auto;
+}
+
+.poster:hover::after {
+  visibility: visible
+}
+
+.poster img {
+  width: 100%
+}
+
+.poster::after {
+  background: url(../img/posters/info.png) no-repeat;
+  background-size: 100%;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+}
+
