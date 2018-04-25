@@ -1,0 +1,435 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#topo_slides_container{
+	position: relative;
+	width: 100%;
+	height: auto;
+	/*background-color: aqua;*/
+	overflow: visible;
+}
+
+
+
+#destaques_topo{
+	position: relative;
+	width: 100%;
+	height: auto;
+	/*background-color: burlywood;*/
+	margin-top: 0;
+	overflow: visible;
+	border-bottom: 2px solid #3f3f3f;
+	
+}
+/*################################
+estilização do slideshow*/
+
+.jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+
+.noticia_titulo_home{
+	position:absolute;
+	right: 8.333333333333333%; /*100px de 1200px de borda*/
+	bottom: 10px;
+	width:480px;
+	height:auto;
+	/*background-color:rgba(255,188,5,0.8);*/
+	line-height:1.27;
+	padding:5px 5px 5px 5px;
+	box-sizing:border-box;
+	z-index: 1;
+}
+
+.noticia_titulo_home h1 {
+	font-size: 2em;
+	color: #44B4FF;
+	/*text-shadow: 1px 1px 1px #ffffff;*/
+	font-weight: bold;
+}
+
+.noticia_titulo_home h2 {
+	font-size: .75em; /*12px*/
+	color: #ffffff;
+	/*text-shadow: 1px 1px 2px #000000;*/
+	
+}
+
+.noticia_titulo_home a {
+	text-decoration: none;
+	font-size: 1em;
+	color: #1E76B2;
+	float: right;
+	border-bottom: 2px solid #1E76B2;
+	margin-top: 10px;
+}
+
+.noticia_titulo_home a:hover {
+	color: #44B4FF;
+	transition: .5s all ease;
+}
+
+/*jssor slider bullet skin 032 css*/
+        .jssorb032 {position:absolute;}
+        .jssorb032 .i {position:absolute;cursor:pointer;}
+        .jssorb032 .i .b {fill:#fff;fill-opacity:0.7;stroke:#000;stroke-width:1200;stroke-miterlimit:10;stroke-opacity:0.25;}
+        .jssorb032 .i:hover .b {fill:#000;fill-opacity:.6;stroke:#fff;stroke-opacity:.35;}
+        .jssorb032 .iav .b {fill:#000;fill-opacity:1;stroke:#fff;stroke-opacity:.35;}
+        .jssorb032 .i.idn {opacity:.3;}
+
+        /*jssor slider arrow skin 051 css*/
+        .jssora051 {display:block;position:absolute;cursor:pointer;}
+        .jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+        .jssora051:hover {opacity:.8;}
+        .jssora051.jssora051dn {opacity:.5;}
+        .jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+
+
+
+/*ESTILIZANDO O MENU RETRATIL: movido para um css separado*/
+
+
+
+
+
+/*ESTILO DAS  SECTIONS DO CORPO DO SITE_HOME*/
+
+#corpo_home {
+	position: relative;
+	width: 87.84773060029283%; /*1200px de 1366px*/
+	height: auto;
+	/*background-color: grey;*/
+	margin: 0 auto;
+	float: none;
+}
+
+#artigos_container {
+	position: relative;
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+#artigos_container p{
+	position: relative;
+	width: auto;
+	margin: 0px 0px 20px 0px;
+	font-size: .75em; /*12px*/
+	text-align: right;
+	padding: 6px 0px;
+	}
+
+#artigos_container p a:last-child {
+	text-decoration: none;
+	color: #CCCB22;
+	border: 2px solid #B2B127;
+	padding: 2px 4px;
+}
+
+#artigos_container p a:last-child:hover {
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #B2B127;
+	border: 2px solid #B2B127;
+	padding: 2px 4px;
+	transition: .5s all ease;
+}
+
+#lista_artigos {
+	position: relative;
+	width: 100%;
+	background-color: #CCCB22;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	padding: 6px;
+}
+
+.artigo {
+	position: relative;
+	width: 300px; /*250px de 1200px*/
+	height: 100%;
+	float: left;
+	display: block;
+	margin-right: 2.5%;
+}
+
+.artigo:hover {
+	/*background-color: #E0E8F0;*/
+	/*box-shadow: 2px 2px 4px #1E76B2;*/
+}
+
+.artigo_tag {
+	position: absolute;
+	background-color: #B2B127;
+	left: 10px;
+	top: 10px;
+	font-weight: bold;
+	color: #ffffff;
+	padding: 0px 6px;
+}
+
+.artigo a{
+	text-decoration: none;
+	
+}
+
+.artigo h4{
+	position: absolute;
+	width: 93%;
+	bottom: 10px;
+	left: 10px;
+	font-size: 1.125em; /*8px*/
+	color: #ffffff;
+	text-align: left;
+}
+
+
+.artigo:last-child {
+	margin-right: 0px;
+}
+
+.artigo img {
+	width: 100%;
+	height: auto;
+	border: 0;
+}
+
+
+#noticias_container {
+	position: relative;
+	width: 66.66666666666667%; /*800px de 1200px*/
+	/*background-color: khaki;*/
+	float: left;
+	height: auto;
+	margin-top: 30px;
+	
+}
+
+#noticias_container > h2{
+	color: #FF5F5E;
+	/*text-shadow: 1px 1px 2px #000000;*/
+}
+
+.lista_noticias {
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-top: 20px ;
+	/*background-color: #555454;*/
+}
+
+.noticia{
+	position: relative;
+	width: auto; /*780px de 800px*/
+	height: auto;
+	margin: 2.5% ; /*10px de 800px*/
+	/*background-color: #867A7A;*/
+	overflow: auto;
+	border-bottom: 2px solid #1E76B2;
+}
+
+.noticia img {
+	width: 20%; /*156px de 780px */
+	height: auto;
+	float: left;
+	margin: 5px 0;
+	
+}
+
+.info_noticia {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	width: 79%; /*624px de 780px descontado 1%*/
+	/*background-color: darkgoldenrod;*/
+	float: left;
+	margin: 5px 0 5px 1%;
+	color: #44B4FF;
+}
+
+.info_noticia div {
+	float: left;
+	width: auto;
+	margin-right: 20px;
+	padding: 2px;	
+	font-size: .625em; /*10px*/
+}
+
+.info_noticia div:last-child {
+	margin-right: 0px;
+}
+
+.chamada_noticia {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 79%; /*624px de 780px descontado 1%*/
+	/*background-color: darkgoldenrod;*/
+	float: left;
+	margin-left: 1%;
+	margin-bottom: 5px;
+	
+}
+
+.chamada_noticia h1 {
+	float: left;
+	width: auto;
+	margin-right: 20px;
+	padding: 2px;
+	font-size: 1.375em; /*22px*/
+	color: #1E76B2;
+	/*text-shadow: 1px 1px 2px #000000;*/
+	
+}
+
+.chamada_noticia h2 {
+	float: left;
+	width: auto;
+	margin-right: 20px;
+	padding: 2px;
+	font-size: .875em; /*14px*/
+	color: #44B4FF;
+	/*text-shadow: 1px 1px 2px #000000;*/
+	
+}
+
+.chamada_noticia a {
+	float: left;
+	width: auto;
+	margin-right: 20px;
+	padding: 2px;
+	font-size: .875em; /*14px*/
+	text-decoration: none;
+	text-align: right;
+	color: #1E76B2;
+	/*text-shadow: 1px 1px 2px #000000;*/
+}
+
+.chamada_noticia a:hover {
+	color: #44B4FF;
+	transition: .5s all ease;
+}
+
+#filmes_cartaz_container {
+	position: relative;
+	width: 33.33333333333333%; /*400px de 1200px*/
+	/*background-color: lightcoral;*/
+	float: left;
+	height: auto;
+	margin-top: 30px;
+}
+
+#filmes_cartaz_container h2 {
+	display: table;
+	width: auto;
+	color: #5F5F5F;
+	background-color: #C0C0C0;
+	padding: 0px 10px;
+}
+
+#filmes_cartaz_container p{
+	position: relative;
+	width: auto;
+	margin: 0px 0px 20px 0px;
+	font-size: .75em; /*12px*/
+	text-align: right;
+	padding: 6px 0px;
+	}
+
+#filmes_cartaz_container p a:last-child {
+	text-decoration: none;
+	color: #CCCB22;
+	border: 2px solid #B2B127;
+	padding: 2px 4px;
+}
+
+#filmes_cartaz_container p a:last-child:hover {
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #B2B127;
+	border: 2px solid #B2B127;
+	padding: 2px 4px;
+	transition: .5s all ease;
+}
+
+.cartaz_container, .embreve_container {
+	position: relative;
+	width: 100%;
+	height: 338px;
+	background-color: #C0C0C0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	overflow: hidden;
+}
+
+figure {
+	width: 100px; 
+	height: auto;
+	line-height: 1em;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+figure img {
+	width: 100%;
+	height: auto;
+	border: 1px solid #000000;
+	box-shadow: 2px 2px 4px #000000;
+}
+
+.poster {
+  display: inline-block;
+  height: auto;
+  position: relative;
+  width: auto;
+}
+
+.poster:hover::after {
+  visibility: visible
+}
+
+.poster img {
+  width: 100%
+}
+
+.poster::after {
+  background: url(../img/posters/info.png) no-repeat;
+  background-size: 100%;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+}
+
+.ad_aside {
+	position: relative;
+	width: 33.33333333333333%; /*400px de 1200px*/
+	/*background-color: lightcoral;*/
+	height: auto;
+	margin: 30px 0px;
+}
+
+.ad_aside img{
+	width: auto;
+	height: auto
+	
+}

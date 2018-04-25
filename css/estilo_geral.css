@@ -1,0 +1,318 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+@font-face {
+     font-family: minha_font;
+     src: url('/UC12_site_cinema/css/font/Roboto-Regular.ttf');
+}
+
+body{
+	font-family: minha_font;
+	font-size: 1em;
+	font-weight: normal;
+	line-height: 1.6;
+	background-color: #ffffff;
+}
+
+
+header{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	width: 100%; /*1366px*/
+	height: 60px;
+	background-color: #44B4FF;
+	justify-content:space-between
+}
+
+
+#logo {
+	margin-left: 5%;
+}
+
+main{
+	margin: 0 auto;
+	/*max-width:1366px; largura máxima do layout*/
+	width: 100%; /*ajuste do layout à tela*/
+	height:auto;
+	/*background-color: aqua;*/
+	display: block;
+	}
+
+.pg_titulo {
+	position: relative;
+	width: 87.84773060029283%; /*1200px de 1366px*/
+	height: auto;
+	padding: 30px 0px;
+	font-size: 2.75em; /*44px*/
+	/*background-color: grey;*/
+	margin: 0 auto;
+	float: none;
+	color: #1E76B2;
+/*	text-shadow: 2px 2px 3px #000000;*/
+}
+
+.pg_titulo_topo {
+	position: relative;
+	width: 87.84773060029283%; /*1200px de 1366px*/
+	height: auto;
+	padding: 30px 0px;
+	font-size: 2.75em; /*44px*/
+	/*background-color: grey;*/
+	margin: 0 auto;
+	float: none;
+	color: #ffffff;
+/*	text-shadow: 2px 2px 3px #000000;*/
+}
+
+#mapasite {
+	position: relative;
+	width: 87.84773060029283%; /*1200px de 1366px*/
+	height: auto;
+	/*background-color: brown;*/
+	margin: 5px auto 20px auto;
+	font-size: .75em; /*12px*/
+	font-weight: bold;
+	padding: 3px 10px;
+	text-decoration: none;
+	color: #1E76B2;
+}
+
+#mapasite a {
+	text-decoration: none;
+	color: #1E76B2;
+}
+
+#mapasite a:hover {
+	color: #B2B127;
+	transition: .5s all ease;
+}
+
+#barrabusca {
+	position: relative;
+	width: 300px;
+	float: right;
+	margin-right: 5%;
+}
+
+#barrabusca #wrap {
+  margin: 5px 10px;
+  display: inline-block;
+  position: relative;
+  height: 40px;
+  float: right;
+  padding: 0;
+}
+
+#barrabusca #wrap input[type="text"] {
+  height: 50px;
+  font-size: 2em;
+  display: inline-block;
+  font-weight: 100;
+  border: none;
+  outline: none;
+  color: #000000;
+  padding: 3px;
+  padding-right: 60px;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  z-index: 3;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  cursor: pointer;
+}
+
+#barrabusca #wrap input[type="text"]:focus:hover {
+  border-bottom: 2px solid #FF5F5E;
+}
+
+#barrabusca #wrap input[type="text"]:focus {
+  width: 300px;
+  z-index: 1;
+  border-bottom: 2px solid #FF5F5E;
+  cursor: text;
+}
+#barrabusca #wrap input[type="submit"] {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  color:red;
+  float: right;
+  background: url(font/Icon-search.svg) center no-repeat;
+  text-indent: -10000px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity .4s ease;
+}
+
+#barrabusca #wrap input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+
+
+#redessociais{
+	position: relative;
+	width: auto;
+	height: 50px;
+	/*background-color: aqua;*/
+	float: right;
+	margin: 5px 20px;
+	line-height: normal
+}
+
+#redessociais a {
+	font-size: 2.1em;
+	color: #ffffff;
+	padding: 0 10px;
+}
+
+#redessociais a:hover {
+	color: #FF5F5E;
+	transition: .5s all;
+}
+
+#redessociais p {
+	font-size:.625em;
+	width: auto;
+	color: #ffffff;
+	font-weight: 500;
+	/*display: inline;*/
+}
+
+
+/*FAZ O HEADER FICAR NO TOPO DA PÁGINA*/
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: absolute;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+
+
+
+footer {
+	position: relative;
+	width: 100%; /*1366px*/
+	height: auto;
+	background-color: #44B4FF;
+	clear: left;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+
+
+
+/*-------------------------------------------------*/
+
+/*estilo para telas de tablet e monitores menores*/
+
+/*-------------------------------------------------*/
+
+
+@media only screen and (max-width: 768px) {
+	
+header {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	width: 100%; /*1366px*/
+	height: 60px;
+	background-color: #44B4FF;
+	justify-content:space-between
+}
+	
+#barrabusca {
+	position: relative;
+	width: auto;
+	float: right;
+	margin-right: 5%;
+	flex-grow: 2;
+}
+
+#barrabusca #wrap {
+  margin: 5px 10px;
+  display: inline-block;
+  position: relative;
+  height: 40px;
+  float: right;
+  padding: 0;
+}
+
+#barrabusca #wrap input[type="text"] {
+  height: 50px;
+  font-size: 1.25em;
+  display: inline-block;
+  font-weight: 100;
+  border: none;
+  outline: none;
+  color: #000000;
+  padding: 3px;
+  padding-right: 60px;
+  width: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  z-index: 3;
+  transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+  cursor: pointer;
+}
+
+#barrabusca #wrap input[type="text"]:focus:hover {
+  border-bottom: 2px solid #FF5F5E;
+}
+
+#barrabusca #wrap input[type="text"]:focus {
+  width: 200px;
+  z-index: 1;
+  border-bottom: 2px solid #FF5F5E;
+  cursor: text;
+  background-color: #FFFFFF;
+}
+	
+#barrabusca #wrap input[type="submit"] {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  color:red;
+  float: right;
+  background: url(font/Icon-search.svg) center no-repeat;
+  text-indent: -10000px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity .4s ease;
+}
+
+#barrabusca #wrap input[type="submit"]:hover {
+  opacity: 0.8;
+}
+	
+	
+	
+	
+	
+}

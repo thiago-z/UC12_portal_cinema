@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="estilo.css" server="192.168.1.10//var/www/html/" local="131683630670000000" remote="131685037200000000" Dst="1" />
-<file name="estilo_formulario_consulta.css" server="192.168.1.10//var/www/html/" local="131683630670000000" remote="131685037200000000" Dst="1" />
-<file name="estilo_formulario.css" server="192.168.1.10//var/www/html/" local="131683788400572497" remote="131685037200000000" Dst="1" />
+<file name="estilo_geral.css" server="192.168.1.10//var/www/html/" local="131690776091204868" remote="131690883600000000" Dst="1" />
+<file name="estilo_menu.css" server="192.168.1.10//var/www/html/" local="131690125531075913" remote="131690207400000000" Dst="1" />
+<file name="estilo_index.css" server="192.168.1.10//var/www/html/" local="131687461650844711" remote="131687569200000000" Dst="1" />
+<file name="estilo_noticias.css" server="192.168.1.10//var/www/html/" local="131687451084286862" remote="131687559000000000" Dst="1" />
+<file name="estilo_noticia_individual.css" server="192.168.1.10//var/www/html/" local="131687405408632406" remote="131687512800000000" Dst="1" />
+<file name="estilo_lancamentos.css" server="192.168.1.10//var/www/html/" local="131687465787714911" remote="131687573400000000" Dst="1" />
+<file name="cabecalho.css" server="192.168.1.10//var/www/html/" local="131687257667015075" remote="131687367000000000" Dst="1" />
+<file name="estilo_filme.css" server="192.168.1.10//var/www/html/" local="131687480011821164" remote="131687587800000000" Dst="1" />
+<file name="estilo_formulario.css" server="192.168.1.10//var/www/html/" local="131687466073740258" remote="131687574000000000" Dst="1" />
 </dwsync>
