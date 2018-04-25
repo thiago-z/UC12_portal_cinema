@@ -11,10 +11,10 @@ if(!isset($_SESSION['aberta'])) {
 <meta charset="utf-8">
 <title>Visualizar</title>
 	<meta name="viewport" content="initial-scale=1">
-<link href="../css/estilo.css" rel="stylesheet" type="text/css">
-<link href="../css/estilo_formulario.css" rel="stylesheet" type="text/css">
+<link href="css/estilo.css" rel="stylesheet" type="text/css">
+<link href="css/estilo_formulario.css" rel="stylesheet" type="text/css">
 
-<script defer src="../js/fontawesome/fontawesome-all.js"></script>
+<script defer src="js/fontawesome/fontawesome-all.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -85,7 +85,7 @@ mysqli_close($strcon);
 
 echo "<h1>Filme cadastrado com sucesso!</h1>";
 echo "<br><br>";
-echo "<p>Para cadastrar outro filme clique <a href='../adicionarFilme.php'><b>aqui</b>.<a></p>";
+echo "<p>Para cadastrar outro filme clique <a href='adicionarFilme.php'><b>aqui</b>.<a></p>";
 ?>
 	
 </section>

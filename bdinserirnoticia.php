@@ -11,10 +11,10 @@ if(!isset($_SESSION['aberta'])) {
 <meta charset="utf-8">
 <title>Visualizar notícias</title>
 	<meta name="viewport" content="initial-scale=1">
-<link href="../css/estilo.css" rel="stylesheet" type="text/css">
-<link href="../css/estilo_formulario.css" rel="stylesheet" type="text/css">
+<link href="css/estilo.css" rel="stylesheet" type="text/css">
+<link href="css/estilo_formulario.css" rel="stylesheet" type="text/css">
 
-<script defer src="../js/fontawesome/fontawesome-all.js"></script>
+<script defer src="js/fontawesome/fontawesome-all.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -92,7 +92,7 @@ mysqli_close($strcon);
 
 echo "<p>Notícia ou artigo cadastrados com sucesso!</p>";
 echo "<br><br>";
-echo "<p>Para cadastrar outra clique <a href='../adicionarNoticia.php'><b>aqui</b>.<a></p>";
+echo "<p>Para cadastrar outra clique <a href='adicionarNoticia.php'><b>aqui</b>.<a></p>";
 ?>
 	
 	
