@@ -33,7 +33,7 @@
 											
 	<section>
 		
-		<p>Bem vendo ao Portal Administrativo do site "Nome do site"!</p>
+		<p>Bem vendo ao Portal Administrativo do site <b>CineSuper</b>!</p>
 		<br><br>
 		<p>Aqui você pode gerenciar todo o conteúdo que fica visível no site, assim como adicionar novas notícias ou artigos para o site.</p>
 		<br><br>
