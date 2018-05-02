@@ -41,7 +41,10 @@ if(!isset($_SESSION['aberta'])) {
 	<ul>
 		
 		<li><a href="index.php">Voltar para Home</a></li>
+		
 		<li><a href="adicionarFilme.php">Adicionar filme</a></li>
+		
+		<li><a href="adicionarGenero.php">Adicionar gênero</a></li>
 		
 	</ul>
 	
@@ -56,6 +59,10 @@ if(!isset($_SESSION['aberta'])) {
 		<li><a href='verFilmes.php?ordem=DESC'><i class='fas fa-sort-alpha-up'></i></a></li>
 		
 		<li><a href='verFilmes.php?ordem=ASC'><i class='fas fa-sort-alpha-down'></i></a></li>
+		
+		
+		
+	
 		
 	</div>
 	

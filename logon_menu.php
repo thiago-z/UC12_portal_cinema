@@ -1,8 +1,13 @@
+	
+	<div id="logo_topo">
+	
+		<img src="img/logosite.png" alt="">
+		
+		<h6>Portal Administrativo CineSuper</h6>
+		
+	</div>
 
-	<h6>Sistema de cadastro</h6>
-		<br>
-		<br>
-
+	
 	
 			<?php
 	if(isset($_SESSION['aberta'])) {	// Verifica se usuário já está logado			
@@ -18,7 +23,7 @@
 					 <li><a href='verFilmes.php'>Filmes</a></li>
 
 					 <li><a href='verNoticias.php?ordem=ASC'>Notícias e artigos</a></li>
-
+					 
 					 <li><a href='config/logout.php'>Sair</a></li>
 
 				 </ul>

@@ -14,7 +14,6 @@
 <main role="main">
 <header id="login">
 
-	<div id="portal_id">
 		
 		<h6>Sistema de cadastro</h6>
 		<br>

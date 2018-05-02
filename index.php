@@ -16,7 +16,6 @@
 <main role="main">
 <header id="login">
 	
-	<div id="portal_id">
 	
 		
 		<!--PARTE SUPERIOR COM LOGON E MENU MOVIDO PARA ARQUIVO SEPARADO-->
@@ -26,14 +25,14 @@
 		
 	?>
 		
-	</div>
+	
 		
 </header>
 <div id="pginicial">
 											
 	<section>
 		
-		<p>Bem vendo ao Portal Administrativo do site <b>CineSuper</b>!</p>
+		<p>Bem vindo ao Portal Administrativo do site CineSuper!</p>
 		<br><br>
 		<p>Aqui você pode gerenciar todo o conteúdo que fica visível no site, assim como adicionar novas notícias ou artigos para o site.</p>
 		<br><br>

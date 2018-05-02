@@ -205,7 +205,7 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
     
     <div class="row">
       <div class="col-25">
-        <label for="emCartaz">Estatus do filme</label>
+        <label for="emCartaz">Status do filme</label>
       </div>
       <div class="col-75">
         <select id="country" name="emCartaz">
