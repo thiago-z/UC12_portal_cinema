@@ -10,10 +10,10 @@
 <file name="adicionarNoticia.php" server="192.168.1.10//var/www/html/" local="131683630480000000" remote="131685007200000000" Dst="1" />
 <file name="excluirFilme.php" server="192.168.1.10//var/www/html/" local="131683630490000000" remote="131685008400000000" Dst="1" />
 <file name="excluirNoticia.php" server="192.168.1.10//var/www/html/" local="131683630490000000" remote="131685008400000000" Dst="1" />
-<file name="editarFilme.php" server="192.168.1.10//var/www/html/" local="131683804170060632" remote="131685008400000000" Dst="1" />
+<file name="editarFilme.php" server="192.168.1.10//var/www/html/" local="131699404025294363" remote="131699511600000000" Dst="1" />
 <file name="adicionarFilme.php" server="192.168.1.10//var/www/html/" local="131697684008259270" remote="131697791400000000" Dst="1" />
-<file name="editarNoticia.php" server="192.168.1.10//var/www/html/" local="131683630490000000" remote="131685008400000000" Dst="1" />
-<file name="bdatualizarfilme.php" server="192.168.1.10//var/www/html/" local="131691522872704845" remote="131691630600000000" Dst="1" />
+<file name="editarNoticia.php" server="192.168.1.10//var/www/html/" local="131699354359575431" remote="131699461800000000" Dst="1" />
+<file name="bdatualizarfilme.php" server="192.168.1.10//var/www/html/" local="131699403278893178" remote="131699511000000000" Dst="1" />
 <file name="bdatualizarnoticia.php" server="192.168.1.10//var/www/html/" local="131691523162020189" remote="131691630600000000" Dst="1" />
 <file name="bdinserirnoticia.php" server="192.168.1.10//var/www/html/" local="131691522056089397" remote="131691630000000000" Dst="1" />
 <file name="logon_menu.php" server="192.168.1.10//var/www/html/" local="131697677592677886" remote="131697785400000000" Dst="1" />

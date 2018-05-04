@@ -75,49 +75,119 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
 	while($linha = mysqli_fetch_array($result)) {
 	
 	$id = $linha["id"];	
-	$nome = $_POST["nome"];
-	$nomeOriginal = $_POST["nomeOriginal"];
-	$estreia = $_POST["estreia"];
-	$duracao = $_POST["duracao"];
-	$genero = $_POST["genero"];
-	$paisOrigem = $_POST["paisOrigem"];
-	$direcao = $_POST["diretor"];
-	$elenco = $_POST["elenco"];
-	$sinopse = $_POST["sinopse"];
-	$imgPoster = $_POST["poster"];
-	$cartaz = $_POST["emCartaz"]; 
+	$nome = $linha["nome"];
+	$nomeOriginal = $linha["nomeOriginal"];
+	$estreia = $linha["estreia"];
+	$duracao = $linha["duracao"];
+	$genero = $linha["genero"];
+	$paisOrigem = $linha["paisOrigem"];
+	$direcao = $linha["diretor"];
+	$elenco = $linha["elenco"];
+	$sinopse = $linha["sinopse"];
+	$imgPoster = $linha["poster"];
+	$cartaz = $linha["emCartaz"]; 
+	$imgFundo = $linha["imgFundo"];
+	$trailer = $linha["trailer"]; 
 ?>
 
 
 <div class="container">
   <form action='bdatualizarfilme.php?editar=<?php echo $idFilme?>' method='post' accept-charset="UTF-8">
    
-    
-    
-    <div class="row">
+   <div class="row">
       <div class="col-25">
-        <label for="nome">Título notícia</label>
+        <label for="nome">Título nacional</label>
       </div>
       <div class="col-75">
-        <input type="text" id="lname" name="nome" value="<?php echo"$nome"?>">
+        <input type="text" id="fname" name="nome" value="<?php echo "$nome"?>">
       </div>
     </div>
     
     <div class="row">
       <div class="col-25">
-        <label for="nomeOriginal">Subtítulo notícia</label>
+        <label for="nomeOriginal">Título original</label>
       </div>
       <div class="col-75">
-        <input type="text" id="lname" name="nomeOriginal" value="<?php echo"$nomeOriginal"?>">
+        <input type="text" id="lname" name="nomeOriginal" value="<?php echo "$nomeOriginal"?>">
       </div>
     </div>
     
     <div class="row">
       <div class="col-25">
-        <label for="texto">Texto</label>
+        <label for="estreia">Data de estréia</label>
       </div>
       <div class="col-75">
-        <textarea id="subject" name="texto" value=<?php echo "$texto"?> </textarea>
+        <input type="text" id="lname" name="estreia" value="<?php echo "$estreia"?>">
+      </div>
+    </div>
+    
+    <div class="row_small">
+      <div class="col-25">
+        <label for="duracao">Duração</label>
+      </div>
+      <div class="col-25">
+        <input type="number" id="lname" name="duracao" value="<?php echo "$duracao"?>">
+      </div>
+    </div>
+    
+    <div class="row_small">
+      <div class="col-25">
+        <label for="genero">Gênero</label>
+      </div>
+      <div class="col-25">
+        <select id="country" name="genero">
+         
+         <?php
+				
+					include_once('config/conectar.php');
+
+
+					if (!$strcon) {
+ 					die('Não foi possível conectar ao MySQL');
+					}
+ 					$sql = "SELECT * FROM generos ORDER BY idGenero";
+					$resultado = mysqli_query($strcon,$sql) or die(mysql_error()."<br>Erro ao executar a inserção dos dados");
+
+					if (mysqli_num_rows($resultado)!=0){
+
+ 						while($elemento = mysqli_fetch_array($resultado))
+ 						{
+   						$idgenero = $elemento['idGenero'];
+						$genero = $elemento['nomeGenero'];
+   						echo '<option value='.$genero.'>'.$genero.'</option>';
+						}
+          
+			}
+		?>		  
+			  
+        </select>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="paisOrigem">País de origem</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="paisOrigem" placeholder="Digite o país.." value="<?php echo "$paisOrigem"?>">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="diretor">Direção</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="diretor" placeholder="Diretor.." value="<?php echo "$direcao"?>">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="elenco">Elenco</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="elenco" placeholder="Digite nome dos atores.." style="height:200px"><?php echo "$elenco"?></textarea>
       </div>
     </div>
     
@@ -125,88 +195,70 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
            	 	<script src="ckeditor/ckeditor.js"></script>
            	 	
            	 		<script>
-						CKEDITOR.replace( 'texto' );
+						CKEDITOR.replace( 'elenco' );
 					</script>
-								
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="sinopse">Sinopse</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="sinopse" placeholder="Digite a sinopse do filme.."  style="height:200px"><?php echo "$sinopse"?></textarea>
+      </div>
+    </div>
+    
+    <!--EDITOR DE CÓDIGO-->	
+           	 	<script src="ckeditor/ckeditor.js"></script>
+           	 	
+           	 		<script>
+						CKEDITOR.replace( 'sinopse' );
+					</script>								
 					
     <div class="row">
       <div class="col-25">
-        <label for="img">Imagem da notícia</label>
+        <label for="poster">Poster do filme</label>
       </div>
       <div class="col-75">
-        <input type="text" id="lname" name="img" value="<?php echo"$imgnoticia"?>">
+        <input type="text" id="lname" name="poster" placeholder="Ex: filme_tal.jpg" value="<?php echo "$imgPoster"?>">
+      </div>
+    </div>
+    
+     <div class="row">
+      <div class="col-25">
+        <label for="imgFundo">Imagem de fundo para ficha técnica</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="imgFundo" placeholder="Ex: filme_tal_bio.jpg" value="<?php echo "$imgFundo"?>">
+      </div>
+    </div>
+    
+     <div class="row">
+      <div class="col-25">
+        <label for="trailer">Trailer do filme</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="trailer" placeholder="Somente o final da url do YouTube" value="<?php echo "$trailer"?>">
       </div>
     </div>
     
     <div class="row">
       <div class="col-25">
-        <label for="relacionado">Filme relacionado</label>
+        <label for="emCartaz">Estatus do filme</label>
       </div>
       <div class="col-75">
-          
-          <?php
-				
-				include_once('config/conectar.php');
-
-
-					if (!$strcon) {
- 					die('Não foi possível conectar ao MySQL');
-					}
- 					$sql = "SELECT * FROM filmes ORDER BY id";
-					$resultado = mysqli_query($strcon,$sql) or die(mysql_error()."<br>Erro ao executar a inserção 					dos dados");
-
-					if (mysqli_num_rows($resultado)!=0){
-
- 					echo "<select name='relacionado'>
- 						<option value='' selected='selected'>Selecionar filme..</option>";
- 						while($elemento = mysqli_fetch_array($resultado))
- 						{
-   						$filmeId = $elemento['id'];
-						$filmeNome = $elemento['nome'];
-   						echo '<option value="'.$filmeId.'">'.$filmeNome.'</option>';
-						}
-
-						}
-					
-					echo "<input name='data' type='hidden' value='$novadata'>
-					<input name='hora' type='hidden' value='$novahora'>";
-					
-					
-				    ?>	
+        <select id="country" name="emCartaz">
+          <option value="sim">Em cartaz</option>
+          <option value="nao">Em breve</option>
+          <option value="off">Já lançado</option>
         </select>
       </div>
     </div>
     
-    
-    <div class="row_small">
-      <div class="col-25">
-        <label for="destaque">Destaque em Home?</label>
-      </div>
-      <div class="col-25">
-        <select id="country" name="destaque">
-          <option value="on">Sim, destacar!</option>
-          <option value="off" selected>Não destacar!</option>
-        </select>
-      </div>
-    </div>
-    
-    <div class="row_small">
-      <div class="col-25">
-        <label for="imgDestaque">Imagem de destaque</label>
-      </div>
-      <div class="col-25">
-        <input type="text" id="lname" name="imgDestaque" value="<?php echo"$imgDestaque"?>">
-      </div>
-    </div>
-    
-    
-    <br>
-    <br>
-    
-    
+
     <div class="row">
       <input type="submit" value="Submit" name='submit'>
     </div>
+   
   </form>
 </div>		
 

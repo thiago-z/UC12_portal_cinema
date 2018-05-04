@@ -60,24 +60,26 @@ include 'conectar.php';
 
 
 //vamos criar uma variável especial para a querie sql	
-$tipo = $_POST["tipo"];
-$titulo = $_POST["titulo"];
-$subtitulo = $_POST["subtitulo"];
-$texto = $_POST["texto"];
-$novadata = $_POST["data"];
-$novahora = $_POST["hora"];
-$autor = $_GET["autor"];
-$relacionado = $_POST["relacionado"];
-$img = $_POST["img"];
-$destaque = $_POST["destaque"];
-$imgDestaque = $_POST["imgDestaque"];
+$nome = $_POST["nome"];
+$nomeOriginal = $_POST["nomeOriginal"];
+$estreia = $_POST["estreia"];
+$duracao = $_POST["duracao"];
+$genero = $_POST["genero"];
+$paisOrigem = $_POST["paisOrigem"];
+$diretor = $_POST["diretor"];
+$elenco = $_POST["elenco"];
+$sinopse = $_POST["sinopse"];
+$poster = $_POST["poster"];
+$cartaz = $_POST["emCartaz"];
+$imgFundo = $_POST["imgFundo"];
+$trailer = $_POST["trailer"];
 
 
 	
 $editar = $_GET['editar'];	
 
 	
-$sql = "UPDATE noticias SET tipo='$tipo', titulo='$titulo', subtitulo='$subtitulo', texto='$texto', data='$novadata', hora='$novahora', autor='$autor', relacionado='$relacionado', img='$img', destaque='$destaque', imgDestaque='$imgDestaque' WHERE id = $editar";
+$sql = "UPDATE filmes SET nome='$nome', nomeOriginal='$nomeOriginal', estreia='$estreia', duracao='$duracao', genero='$genero', paisOrigem='$paisOrigem', diretor='$diretor', elenco='$elenco', sinopse='$sinopse', poster='$poster', emCartaz='$cartaz', imgFundo='$imgFundo', trailer='$trailer' WHERE id = $editar";
 
 
 mysqli_query($strcon,$sql) or die("Erro na edição");

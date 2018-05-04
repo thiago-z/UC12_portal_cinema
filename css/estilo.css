@@ -358,8 +358,9 @@ footer p{
 	padding-left: 50px;
 }
 
-#pginicial section h1{
+#pginicial section h1, #pginicial h2, #pginicial p {
 	text-align: center;
+	padding: 20px 0px;
 }
 
 #pginicial section p{
