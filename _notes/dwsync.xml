@@ -10,7 +10,7 @@
 <file name="adicionarNoticia.php" server="192.168.1.10//var/www/html/" local="131700390123725419" remote="131700498000000000" Dst="1" />
 <file name="excluirFilme.php" server="192.168.1.10//var/www/html/" local="131683630490000000" remote="131685008400000000" Dst="1" />
 <file name="excluirNoticia.php" server="192.168.1.10//var/www/html/" local="131683630490000000" remote="131685008400000000" Dst="1" />
-<file name="editarFilme.php" server="192.168.1.10//var/www/html/" local="131700390116595959" remote="131700498000000000" Dst="1" />
+<file name="editarFilme.php" server="192.168.1.10//var/www/html/" local="131700409176978741" remote="131700517200000000" Dst="1" />
 <file name="adicionarFilme.php" server="192.168.1.10//var/www/html/" local="131700389465824708" remote="131700497400000000" Dst="1" />
 <file name="editarNoticia.php" server="192.168.1.10//var/www/html/" local="131700390109790746" remote="131700498000000000" Dst="1" />
 <file name="bdatualizarfilme.php" server="192.168.1.10//var/www/html/" local="131700390943550178" remote="131700498600000000" Dst="1" />
