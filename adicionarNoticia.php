@@ -32,20 +32,22 @@ $novahora = substr($hora,0,2) . "h" .substr($hora,3,2) .
 
 <body>
 <main role="main">
+
 <header id="login">
 	
-	<div id="portal_id">
-	<!--PARTE SUPERIOR COM LOGON E MENU MOVIDO PARA ARQUIVO SEPARADO-->
+	
+		
+		<!--PARTE SUPERIOR COM LOGON E MENU MOVIDO PARA ARQUIVO SEPARADO-->
 	<?php
 		
 		include('logon_menu.php');
 		
 	?>
 		
-		
-	</div>
+	
 		
 </header>
+
 <div id="pginicial">
 		
 		

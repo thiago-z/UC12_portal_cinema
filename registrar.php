@@ -10,18 +10,22 @@
 
 <body>
 <main role="main">
+
 <header id="login">
 	
-	<div id="portal_id">
-		<p>Sistema de cadastro</p>
-		<br>
-		<br>
-			
+	
 		
+		<!--PARTE SUPERIOR COM LOGON E MENU MOVIDO PARA ARQUIVO SEPARADO-->
+	<?php
 		
-	</div>
+		include('logon_menu.php');
 		
-</header>
+	?>
+		
+	
+		
+</header>	
+
 <div id="pginicial">
 										
 										

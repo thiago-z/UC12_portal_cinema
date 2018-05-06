@@ -22,7 +22,7 @@ if(!isset($_SESSION['aberta'])) {
 <main role="main">
 <header id="login">
 	
-	<div id="portal_id">
+	
 		
 		<!--PARTE SUPERIOR COM LOGON E MENU MOVIDO PARA ARQUIVO SEPARADO-->
 	<?php
@@ -31,9 +31,10 @@ if(!isset($_SESSION['aberta'])) {
 		
 	?>
 		
-	</div>
+	
 		
 </header>
+
 <div id="pg_filme_consulta">						
 	
 <nav class="submenu">

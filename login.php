@@ -14,10 +14,14 @@
 <main role="main">
 <header id="login">
 
+		<div id="logo_topo">
+	
+			<img src="img/logosite.png" alt="">
+
+			<h6>Portal Administrativo CineSuper</h6>
 		
-		<h6>Sistema de cadastro</h6>
-		<br>
-		<br>
+		</div>
+		
 		<section class="formulario">	
 		
 	<?php
@@ -71,7 +75,7 @@ else {
             <input type="text" name="usuario" placeholder="usuario" required autofocus>
             <label>Senha</label>
             <input type="password" name="senha" placeholder="Senha" required>
-            <button type="submit" name="submit" value="Entrar">Acessar</button>
+            <button type="submit" name="submit" value="Entrar" id="btn_login">Acessar</button>
         </form>
         
 	</div>	

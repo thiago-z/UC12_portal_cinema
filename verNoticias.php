@@ -19,23 +19,23 @@ if(!isset($_SESSION['aberta'])) {
 
 <body>
 <main role="main">
+
 <header id="login">
 	
-	<div id="portal_id">
 	
-	<!--PARTE SUPERIOR COM LOGON E MENU MOVIDO PARA ARQUIVO SEPARADO-->
+		
+		<!--PARTE SUPERIOR COM LOGON E MENU MOVIDO PARA ARQUIVO SEPARADO-->
 	<?php
 		
 		include('logon_menu.php');
 		
 	?>
 		
-		
-	</div>
+	
 		
 </header>
 
-	<div id="pg_filme_consulta">						
+<div id="pg_filme_consulta">						
 						
 	<?php
 //Incluir o arquivo de conexão ao banco de dados:
