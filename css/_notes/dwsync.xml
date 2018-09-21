@@ -3,4 +3,14 @@
 <file name="estilo.css" server="192.168.1.10//var/www/html/" local="131700395414617674" remote="131700503400000000" Dst="1" />
 <file name="estilo_formulario_consulta.css" server="192.168.1.10//var/www/html/" local="131686617549884331" remote="131686725000000000" Dst="1" />
 <file name="estilo_formulario.css" server="192.168.1.10//var/www/html/" local="131700401552908915" remote="131700509400000000" Dst="1" />
+<file name="estilo.css" server="192.168.1.4//var/www/html/" local="131700395414617674" remote="131812500150000000" Dst="1" />
+<file name="estilo_filme.css" server="192.168.1.4//var/www/html/" local="131691631399144088" remote="131812500150000000" Dst="1" />
+<file name="estilo_formulario.css" server="192.168.1.4//var/www/html/" local="131700401552908915" remote="131812500150000000" Dst="1" />
+<file name="estilo_formulario_consulta.css" server="192.168.1.4//var/www/html/" local="131686617549884331" remote="131812500150000000" Dst="1" />
+<file name="estilo_geral.css" server="192.168.1.4//var/www/html/" local="131691631399153879" remote="131812500150000000" Dst="1" />
+<file name="estilo_index.css" server="192.168.1.4//var/www/html/" local="131691631399163664" remote="131812500150000000" Dst="1" />
+<file name="estilo_lancamentos.css" server="192.168.1.4//var/www/html/" local="131691631399173446" remote="131812500150000000" Dst="1" />
+<file name="estilo_menu.css" server="192.168.1.4//var/www/html/" local="131691631399183230" remote="131812500150000000" Dst="1" />
+<file name="estilo_noticias.css" server="192.168.1.4//var/www/html/" local="131691631399193018" remote="131812500150000000" Dst="1" />
+<file name="estilo_noticia_individual.css" server="192.168.1.4//var/www/html/" local="131691631399193018" remote="131812500150000000" Dst="1" />
 </dwsync>
